@@ -1,0 +1,25 @@
+.navbar {
+  position: relative;
+}
+.navbar::after,
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #979797;
+  height: 12px;
+  width: 1px;
+}
+.navbar::after {
+  left: -150px;
+}
+.navbar::before {
+  right: -150px;
+}
+@media (max-width: 994px) {
+  .navbar::after,
+  .navbar::before {
+    display: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+.eventCard:first-child {
+  background-color: #88BC3E;
+  box-shadow: 60px 60px 49.5px 0px rgba(0, 0, 0, 0.16);
+  height: 260px;
+  width: 280px;
+}

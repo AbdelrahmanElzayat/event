@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="75" height="75" viewBox="0 0 75 75">
+  <defs>
+    <filter id="Ellipse_3629" x="0" y="0" width="75" height="75" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#919191" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_3629)">
+    <circle id="Ellipse_3629-2" data-name="Ellipse 3629" cx="22.5" cy="22.5" r="22.5" transform="translate(10 10)" fill="#fff"/>
+  </g>
+  <path id="user-group-svgrepo-com" d="M3,21.291V20.127a4.655,4.655,0,0,1,4.655-4.654h4.655a4.655,4.655,0,0,1,4.655,4.654v1.164m0-9.309a3.491,3.491,0,1,0,0-6.982m6.982,16.291V20.127a4.655,4.655,0,0,0-4.655-4.654h-.582M13.473,8.491A3.491,3.491,0,1,1,9.982,5,3.491,3.491,0,0,1,13.473,8.491Z" transform="translate(19.027 19.355)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+</svg>
