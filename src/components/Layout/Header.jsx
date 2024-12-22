@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import logo from "@/assets/images/logo.png";
-import search from "@/assets/icons/search.svg";
+import search from "@/assets/icons/Search.svg";
 import menu from "@/assets/icons/menu.svg";
 import Navbar from "./Navbar";
 import NavMobile from "./NavMobile";
