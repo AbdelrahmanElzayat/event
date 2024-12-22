@@ -7,7 +7,7 @@ const DatePlace = () => {
   return (
     <div className="DatePlace mb-20">
       <div className="container">
-        <div className="headerDate mb-5">
+        <div className="headerDate mb-5 flex flex-col gap-4">
           <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             تفاصيل المبادرة
           </span>

@@ -4,10 +4,10 @@ const EventCard = ({ event, isActive, onMouseEnter }) => {
   return (
     <div
       onMouseEnter={onMouseEnter}
-      className={`flex flex-col items-start justify-center gap-2 transition-all cursor-pointer p-5 rounded-[70px] ${
+      className={`flex flex-col items-start justify-center gap-2 transition-all cursor-pointer p-5 rounded-[70px] py-6 ${
         isActive
-          ? "bg-[#88BC3E] shadow-custom-heavy h-[260px]"
-          : "hover:bg-[#88BC3E] hover:shadow-custom-heavy hover:h-[260px]"
+          ? "bg-[#88BC3E] shadow-custom-heavy scale-110"
+          : "hover:bg-[#88BC3E] hover:shadow-custom-heavy"
       }`}
       //   className={`flex flex-col items-start justify-center gap-2 transition-all cursor-pointer p-5 hover:bg-[#88BC3E] hover:shadow-custom-heavy hover:h-[260px] hover:w-[280px] rounded-[70px]`}
     >

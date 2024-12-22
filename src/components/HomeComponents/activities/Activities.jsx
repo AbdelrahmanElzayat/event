@@ -104,7 +104,7 @@ const Activities = () => {
         <Image src={scrollImg} alt="" />
       </div>
       <div className="container">
-        <div className="headerDate mb-5">
+        <div className="headerDate mb-5 flex flex-col gap-4">
           <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             مناسبات خاصة
           </span>
@@ -112,7 +112,7 @@ const Activities = () => {
             استكشف الانشطة الخاصة بالحدث
           </h2>
         </div>
-        <div className="activitiesList flex flex-col items-start gap-7 ">
+        <div className="activitiesList flex flex-col items-start gap-7 mt-16">
           <ActivityList label="المحاضرات والجلسات التدريبية" data={lectures} />
           <ActivityList label="الدورات" data={courses} />
           <ActivityList label="ورش العمـل" data={workShops} />
