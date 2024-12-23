@@ -6,7 +6,12 @@ import Hero from "@/components/HomeComponents/hero/Hero";
 import JoinNow from "@/components/HomeComponents/joinNow/JoinNow";
 
 export default async function Home() {
-  const response = await fetch("https://hub.ppte.sa/event_handler/api/events");
+   const response = await fetch(
+     "https://hub.ppte.sa/event_handler/api/events",
+     {
+       cache: "no-store", // تعطيل الكاش
+     }
+   );
   if (!response.ok) {
     throw new Error("Faild to fetch events !");
   }
