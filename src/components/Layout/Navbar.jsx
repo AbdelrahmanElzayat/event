@@ -10,7 +10,7 @@ const Navbar = () => {
             href={"##"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            الملتقى
+            عن الملتقى
           </Link>
         </li>
         <li>
@@ -42,7 +42,7 @@ const Navbar = () => {
             href={"##"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            الجلسات التدريبية
+            تواصل معنا
           </Link>
         </li>
       </ul>

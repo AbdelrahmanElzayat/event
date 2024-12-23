@@ -113,7 +113,7 @@ const Activities = () => {
           </h2>
         </div>
         <div className="activitiesList flex flex-col items-start gap-7 mt-16">
-          <ActivityList label="المحاضرات والجلسات التدريبية" data={lectures} />
+          <ActivityList label="المحاضرات" data={lectures} />
           <ActivityList label="الدورات" data={courses} />
           <ActivityList label="ورش العمـل" data={workShops} />
         </div>

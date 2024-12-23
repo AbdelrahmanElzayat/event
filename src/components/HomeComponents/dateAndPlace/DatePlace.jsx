@@ -8,9 +8,9 @@ const DatePlace = () => {
     <div className="DatePlace mb-20">
       <div className="container">
         <div className="headerDate mb-5 flex flex-col gap-4">
-          <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
+          {/* <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             تفاصيل المبادرة
-          </span>
+          </span> */}
           <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px]">
             المكان والتاريخ
           </h2>
@@ -26,7 +26,7 @@ const DatePlace = () => {
                   موقع الحدث
                 </span>
                 <h3 className="text-[20px] text-textPrimary font-bold">
-                  برج الفيصلية الرياض
+                  قاعة الأمير سلطان الكبرى
                 </h3>
               </div>
             </div>
@@ -52,7 +52,7 @@ const DatePlace = () => {
                   الموعد
                 </span>
                 <h3 className="text-[20px] text-textPrimary font-bold">
-                  وقت المعرض
+                  وقت المعرض المصاحب
                 </h3>
                 <span className="text-textPrimary font-normal text-[15px]">
                   04.00PM ~ 10.00PM{" "}

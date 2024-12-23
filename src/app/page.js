@@ -3,7 +3,7 @@ import Clients from "@/components/HomeComponents/clients/Clients";
 import DatePlace from "@/components/HomeComponents/dateAndPlace/DatePlace";
 import Events from "@/components/HomeComponents/eventsCompletely/Events";
 import Hero from "@/components/HomeComponents/hero/Hero";
-import Image from "next/image";
+import JoinNow from "@/components/HomeComponents/joinNow/JoinNow";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <Events />
       <DatePlace />
       <Activities />
+      <JoinNow/>
     </div>
   );
 }

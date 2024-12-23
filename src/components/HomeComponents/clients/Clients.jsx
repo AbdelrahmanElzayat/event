@@ -18,7 +18,7 @@ const Clients = () => {
   return (
     <div className="container py-20">
       <h3 className="text-right text-textPrimary font-extrabold text-xl">
-        المشاركون في المعرض
+        العارضين
       </h3>
       <Swiper
         spaceBetween={30}
