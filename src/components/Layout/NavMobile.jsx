@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const NavMobile = ({ closeMenu }) => {
@@ -9,6 +10,8 @@ const NavMobile = ({ closeMenu }) => {
     { href: "#events", label: "الأنشطة المصاحبة" },
     { href: "#contact-us", label: "تواصل معنا" },
   ];
+
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 w-full h-full bg-backgroundPrimary z-[999] flex flex-col items-center justify-center gap-8">
@@ -24,7 +27,10 @@ const NavMobile = ({ closeMenu }) => {
             <Link
               href={link.href}
               className="text-textPrimary text-lg font-medium uppercase"
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                pathname === "/" ? window.scrollTo(0, 0) : closeMenu();
+              }}
             >
               {link.label}
             </Link>

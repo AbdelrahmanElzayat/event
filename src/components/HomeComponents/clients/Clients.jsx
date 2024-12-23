@@ -16,7 +16,7 @@ import Image from "next/image";
 const Clients = () => {
   const logos = [c1, c2, c3, c4, c5, c6, c7, c8, c5, c6, c7, c8];
   return (
-    <div className="container py-20">
+    <div id="Exhibitors" className="container py-20">
       <h3 className="text-right text-textPrimary font-extrabold text-xl">
         العارضين
       </h3>

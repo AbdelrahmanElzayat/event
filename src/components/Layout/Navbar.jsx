@@ -9,6 +9,7 @@ const Navbar = () => {
           <Link
             href={"/"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
+            onClick={() => window.scrollTo(0, 0)}
           >
             عن الملتقى
           </Link>
