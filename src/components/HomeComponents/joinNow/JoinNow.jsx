@@ -275,32 +275,51 @@ const JoinNow = () => {
                                   key={itemIndex}
                                   className="flex justify-between items-center gap-2 w-full mb-3 cursor-pointer"
                                 >
-                                  <Field
-                                    type="checkbox"
-                                    name="selectedSessions"
-                                    value={item}
-                                    onChange={(e) => {
-                                      if (e.target.checked) {
-                                        setFieldValue("selectedSessions", [
-                                          ...values.selectedSessions,
-                                          item,
-                                        ]);
-                                      } else {
-                                        setFieldValue(
-                                          "selectedSessions",
-                                          values.selectedSessions.filter(
-                                            (sessionItem) =>
-                                              sessionItem.name !== item.name
-                                          )
-                                        );
-                                      }
-                                    }}
-                                    disabled={values.selectedSessions.some(
-                                      (selectedItem) =>
-                                        selectedItem.name !== item.name &&
-                                        selectedItem.time === item.time
-                                    )}
-                                  />
+                                  <div className="relative">
+                                    <Field
+                                      className="appearance-none w-5 h-5 border border-gray-400 rounded-md checked:bg-[#88BC3E] disabled:bg-gray-300"
+                                      type="checkbox"
+                                      name="selectedSessions"
+                                      value={item}
+                                      onChange={(e) => {
+                                        if (e.target.checked) {
+                                          setFieldValue("selectedSessions", [
+                                            ...values.selectedSessions,
+                                            item,
+                                          ]);
+                                        } else {
+                                          setFieldValue(
+                                            "selectedSessions",
+                                            values.selectedSessions.filter(
+                                              (sessionItem) =>
+                                                sessionItem.name !== item.name
+                                            )
+                                          );
+                                        }
+                                      }}
+                                      disabled={values.selectedSessions.some(
+                                        (selectedItem) =>
+                                          selectedItem.name !== item.name &&
+                                          selectedItem.time === item.time
+                                      )}
+                                    />
+                                    <div className="absolute top-0 left-0 w-5 h-5 flex items-center justify-center pointer-events-none">
+                                      <svg
+                                        className="w-4 h-4 text-backgroundBlue font-bold"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                      >
+                                        <path
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          d="M5 13l4 4L19 7"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
                                   <div className="flex-1">
                                     <span className="text-textPrimary text-sm font-bold mb-3">
                                       {item.name}
