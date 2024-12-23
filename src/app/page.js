@@ -17,7 +17,6 @@ export default async function Home() {
   }
   const events = await response.json();
 
-  console.log(events);
   
   return (
     <div className="home">

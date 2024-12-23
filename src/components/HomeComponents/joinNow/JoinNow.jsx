@@ -62,7 +62,6 @@ const JoinNow = ({ events }) => {
     }
   };
 
-  console.log(result);
   
 
   return (
