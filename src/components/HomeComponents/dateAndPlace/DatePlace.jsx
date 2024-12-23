@@ -21,10 +21,13 @@ const DatePlace = () => {
               <div className="datesCardIcon rounded-2xl bg-[#DFE8E5] flex items-center justify-center w-[50px]  py-5">
                 <Image src={locationIcon} alt="location" />
               </div>
-              <div className="datesCardText flex flex-col gap-2">
+              <div className="datesCardText flex flex-col gap-0">
                 <span className="text-[15px] text-textPrimary opacity-90 font-light">
                   موقع الحدث
                 </span>
+                <h3 className="text-[16px] text-textPrimary font-bold">
+                  برج الفيصلية الرياض
+                </h3>
                 <h3 className="text-[20px] text-textPrimary font-bold">
                   قاعة الأمير سلطان الكبرى
                 </h3>

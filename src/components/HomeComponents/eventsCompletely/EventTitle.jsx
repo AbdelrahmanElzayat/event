@@ -9,7 +9,7 @@ const EventTitle = () => {
           مخطط الحدث
         </span>
         <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] w-1/2 leading-[45px]">
-          الفعاليـات المتوقعة
+          أهمية الملتقى والتوقعات
         </h2>
       </div>
       <div className="ImgEvent hidden lg:block">

@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="container">
         <div className="heroContainer flex flex-col lg:flex-row gap-12 justify-between items-center">
           <h1 className="basis-[40%] text-textPrimary text-2xl xs:text-3xl md:text-4xl lg:text-[60px] font-extrabold capitalize text-right lg:leading-[65px]">
-            معرض مبتكر للحيوانات الأليفة في السعودية
+            ملتقى نخبة الأعمال في قطاع رعاية الحيوانات الأليفة
           </h1>
           <div className="aiContant">
             <div className="imgCats relative bottom-0 basis-[60%] self-end">

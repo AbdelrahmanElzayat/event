@@ -231,7 +231,6 @@ const JoinNow = () => {
                           name="selectedDay"
                           value={day.name}
                           checked={day.name === selectedDay}
-                          //   disabled={day.name === selectedDay}
                           onClick={() => setSelectedDay(day.name)}
                         />
                         <div className="absolute top-0 left-0 w-5 h-5 flex items-center justify-center pointer-events-none">

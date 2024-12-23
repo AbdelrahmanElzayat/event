@@ -105,11 +105,11 @@ const Activities = () => {
       </div>
       <div className="container">
         <div className="headerDate mb-5 flex flex-col gap-4">
-          <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
+          {/* <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             مناسبات خاصة
-          </span>
+          </span> */}
           <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px]">
-            استكشف الانشطة الخاصة بالحدث
+            الأنشطة المصاحبة
           </h2>
         </div>
         <div className="activitiesList flex flex-col items-start gap-7 mt-16">
