@@ -99,7 +99,7 @@ const Activities = () => {
     },
   ];
   return (
-    <div className="Activities mb-20 relative">
+    <div id="events" className="Activities mb-20 relative">
       <div className="scrollCourses hidden lg:block absolute right-0 top-[100px]">
         <Image src={scrollImg} alt="" />
       </div>

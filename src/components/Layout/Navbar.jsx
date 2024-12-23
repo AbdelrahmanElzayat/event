@@ -7,7 +7,7 @@ const Navbar = () => {
       <ul className="flex items-center justify-center gap-16">
         <li>
           <Link
-            href={"##"}
+            href={"/"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
             عن الملتقى
@@ -15,7 +15,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            href={"##"}
+            href={"#Expectations"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
             أهمية الملتقى و التوقعات
@@ -23,7 +23,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            href={"##"}
+            href={"#Exhibitors"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
             العارضيـن
@@ -31,7 +31,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            href={"##"}
+            href={"#events"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
             الأنشطة المصاحبة
@@ -39,7 +39,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link
-            href={"##"}
+            href={"#contact-us"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
             تواصل معنا

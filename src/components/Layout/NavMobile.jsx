@@ -3,11 +3,11 @@ import React from "react";
 
 const NavMobile = ({ closeMenu }) => {
   const links = [
-    { href: "##", label: "الملتقى" },
-    { href: "##", label: "أهمية الملتقى و التوقعات" },
-    { href: "##", label: "العارضيـن" },
-    { href: "##", label: "الأنشطة المصاحبة" },
-    { href: "##", label: "الجلسات التدريبية" },
+    { href: "/", label: "عن الملتقى" },
+    { href: "#Expectations", label: "أهمية الملتقى و التوقعات" },
+    { href: "#Exhibitors", label: "العارضيـن" },
+    { href: "#events", label: "الأنشطة المصاحبة" },
+    { href: "#contact-us", label: "تواصل معنا" },
   ];
 
   return (

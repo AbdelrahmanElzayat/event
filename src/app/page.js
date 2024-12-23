@@ -5,7 +5,13 @@ import Events from "@/components/HomeComponents/eventsCompletely/Events";
 import Hero from "@/components/HomeComponents/hero/Hero";
 import JoinNow from "@/components/HomeComponents/joinNow/JoinNow";
 
-export default function Home() {
+export default async function Home() {
+  const response = await fetch("https://hub.ppte.sa/event_handler/api/events");
+  if (!response.ok) {
+    throw new Error("Faild to fetch events !");
+  }
+  const events = await response.json();
+
   return (
     <div className="home">
       <Hero />
@@ -13,7 +19,7 @@ export default function Home() {
       <Events />
       <DatePlace />
       <Activities />
-      <JoinNow/>
+      <JoinNow events={events} />
     </div>
   );
 }
