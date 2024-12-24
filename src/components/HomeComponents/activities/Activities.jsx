@@ -7,7 +7,7 @@ import lec1 from "@/assets/images/orshka.jpg";
 import lec2 from "@/assets/images/len.jpg";
 import lec3 from "@/assets/images/goncalo.jpg";
 import lec4 from "@/assets/images/mat.jpg";
-// import lec5 from "@/assets/images/genever.jpg";
+import lec5 from "@/assets/images/genever.jpg";
 
 import w1 from "@/assets/images/w1.png";
 import w2 from "@/assets/images/w2.png";
@@ -103,7 +103,7 @@ const Activities = () => {
   ];
   const courses = [
     {
-      image: lec4,
+      image: lec5,
       title: "دليل الرعاية الصحية لجلد وشعر القطط والكلاب",
       lecturer: "جينيفر بيشوب جينكينز  / الولايات المتحدة",
       des: `
