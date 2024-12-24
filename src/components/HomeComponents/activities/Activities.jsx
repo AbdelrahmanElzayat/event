@@ -20,7 +20,6 @@ import w8 from "@/assets/images/w8.png";
 import Image from "next/image";
 
 const Activities = () => {
-  
   const lectures = [
     {
       image: lec1,
@@ -129,12 +128,34 @@ const Activities = () => {
   ];
   const workShops = [
     {
+      image: w5,
+      title: "إعادة تعريف رعاية الحيوانات الأليفة في المملكة العربية السعودية",
+    },
+    {
+      image: w6,
+      title:
+        "الاتجاهات الناشئة في التغذية البيطرية: معيار جديد للأنظمة الغذائية العلاجية",
+    },
+    {
+      image: w7,
+      title: "الأمراض الجلدية والإدارة الغذائية لاضطرابات الجلد",
+    },
+    {
+      image: w4,
+      title: "اعتلال الأمعاء المزمن لدى القطط",
+    },
+    {
+      image: w8,
+      title: "مقدمة في العلاج الطبيعي وإعادة التأهيل للحيوانات الصغيرة",
+    },
+
+    {
       image: w1,
       title: "إدارة اعاقات القطط في حالات الطوارئ",
     },
     {
       image: w2,
-      title: "أنظمة الموجات فوق الصوتية في حالات الطوارئ",
+      title: "أنظمة الموجات فوق الصوتية (POCUS) في حالات الطوارئ",
     },
     {
       image: w3,
@@ -144,26 +165,13 @@ const Activities = () => {
       image: w4,
       title: "اعتلال الكلى المزمن لدى القطط",
     },
-    {
-      image: w5,
-      title: "إعادة تعريف رعاية الحيوانات الأليفة في المملكة العربية السعودية",
-    },
-    {
-      image: w6,
-      title: "معيار جديد للأنظمة الغذائية العلاجية",
-    },
-    {
-      image: w7,
-      title: "الأمراض الجلدية والإدارة الغذائية لاضطرابات الجلد",
-    },
-    {
-      image: w8,
-      title: "العلاج الطبيعي وإعادة التأهيل للحيوانات الصغيرة",
-    },
   ];
   return (
     <div id="events" className="Activities mb-20 relative">
       <div className="scrollCourses hidden lg:block absolute right-0 top-[100px]">
+        <Image src={scrollImg} alt="" />
+        <Image src={scrollImg} alt="" />
+        <Image src={scrollImg} alt="" />
         <Image src={scrollImg} alt="" />
       </div>
       <div className="container">

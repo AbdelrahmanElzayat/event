@@ -1,6 +1,19 @@
 import React from "react";
 import ActivityCard from "./ActivityCard";
 
+const DaySection = ({ title, data }) => (
+  <div className="mb-8">
+    <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4 text-center border-b-2 border-[#88BC3E] pb-2">
+      {title}
+    </h2>
+    <div className="ListCards grid grid-cols-2 lg:grid-cols-4 gap-5">
+      {data.map((item, i) => (
+        <ActivityCard key={i} item={item} />
+      ))}
+    </div>
+  </div>
+);
+
 const ActivityList = ({ label, data }) => {
   return (
     <div className="ActivityCards">
@@ -10,11 +23,23 @@ const ActivityList = ({ label, data }) => {
           {label}
         </h4>
       </div>
-      <div className="ListCards grid grid-cols-2 lg:grid-cols-4 gap-5">
-        {label === "المحاضرات"
-          ? data?.map((item, i) => <ActivityCard key={i} item={item} />)
-          : data?.map((item, i) => <ActivityCard key={i} item={item} />)}
-      </div>
+      {label === "المحاضرات" ? (
+        <>
+          <DaySection title="اليوم الأول" data={data.slice(0, 4)} />
+          <DaySection title="اليوم الثاني" data={data.slice(4, 8)} />
+        </>
+      ) : label === "ورش العمـل" ? (
+        <>
+          <DaySection title="اليوم الأول" data={data.slice(0, 5)} />
+          <DaySection title="اليوم الثاني" data={data.slice(0, 4)} />
+        </>
+      ) : (
+        <div className="ListCards grid grid-cols-2 lg:grid-cols-4 gap-5">
+          {data.map((item, i) => (
+            <ActivityCard key={i} item={item} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -73,7 +73,7 @@ const JoinNow = ({ events }) => {
           {/* <span className="text-textPrimary text-xl font-normal text-center">
             مهتم بالفعل؟
           </span> */}
-          <h2 className="text-[40px] font-extrabold text-textPrimary">
+          <h2 className="text-xl lg:text-[40px] font-extrabold text-textPrimary">
             انضم الآن
           </h2>
         </div>
