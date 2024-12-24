@@ -3,15 +3,11 @@ import ActivityList from "./ActivityList";
 
 import scrollImg from "@/assets/images/scrollCourses.svg";
 
-import lec1 from "@/assets/images/lec1.png";
-import lec2 from "@/assets/images/lec2.png";
-import lec3 from "@/assets/images/lec3.png";
-import lec4 from "@/assets/images/lec4.png";
-import lec5 from "@/assets/images/lec5.png";
-import lec6 from "@/assets/images/lec6.png";
-import lec7 from "@/assets/images/lec7.png";
-
-import c1 from "@/assets/images/course1.png";
+import lec1 from "@/assets/images/orshka.jpg";
+import lec2 from "@/assets/images/len.jpg";
+import lec3 from "@/assets/images/goncalo.jpg";
+import lec4 from "@/assets/images/mat.jpg";
+import lec5 from "@/assets/images/genever.jpg";
 
 import w1 from "@/assets/images/w1.png";
 import w2 from "@/assets/images/w2.png";
@@ -28,40 +24,49 @@ const Activities = () => {
     {
       image: lec1,
       des: "أساسيات تغذية الحيوان الأليف (القطط والكلاب)",
+      lecturer: "أورشكا سكوفكا - سلوفينيا",
     },
     {
       image: lec2,
       des: "كشف أسرار زيادة الإيرادات و مضاعفة الارباح",
-    },
-    {
-      image: lec2,
-      des: "ماذا تريد القطط ايصالها لنا بخصوص سلوكها وطباعها؟",
+      lecturer: "لين سويتانوفسكي - الولايات المتحدة",
     },
     {
       image: lec3,
+      des: "ماذا تريد القطط ايصالها لنا بخصوص سلوكها وطباعها؟",
+      lecturer: "غونسالو دا غراسا بيريرا - البرتغال",
+    },
+    {
+      image: lec2,
       des: "تأثير المنتجات ذات الجودة العالية على تعظيم الأرباح",
+      lecturer: "لين سويتانوفسكي - الولايات المتحدة",
+    },
+    {
+      image: lec2,
+      des: "تصميم برنامج ولاء ناجح لعملاءك",
+      lecturer: "لين سويتانوفسكي - الولايات المتحدة",
+    },
+    {
+      image: lec3,
+      des: "خلق بيئة مثالية ومناسبة للقطط",
+      lecturer: "غونسالو دا غراسا بيريرا - البرتغال",
     },
     {
       image: lec4,
-      des: "تصميم برنامج ولاء ناجح لعملاءك",
-    },
-    {
-      image: lec5,
-      des: "خلق بيئة مثالية ومناسبة للقطط",
-    },
-    {
-      image: lec6,
       des: "التميز في تطبيق اساسيات التجارة الإلكترونية",
+      lecturer: " مات الدرش - الولايات المتحدة",
     },
     {
-      image: lec7,
+      image: lec1,
       des: "الوصفة السحرية لطعام الحيوان الأليف",
+      lecturer: "أورشكا سكوفكا - سلوفينيا",
     },
   ];
   const courses = [
     {
-      image: c1,
+      image: lec5,
       des: "دليل الرعاية الصحية لجلد وشعر القطط والكلاب",
+      lecturer: "جينيفر بيشوب جينكينز  / الولايات المتحدة",
     },
   ];
   const workShops = [
