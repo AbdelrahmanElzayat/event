@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import style from "./join.module.css";
 import FormInputs from "./FormInputs";
 import axios from "axios";
 import ModalSuccess from "./ModalSuccess";

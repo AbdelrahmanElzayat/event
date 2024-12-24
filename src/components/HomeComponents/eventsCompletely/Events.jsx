@@ -1,7 +1,5 @@
 import React from "react";
-import style from "./events.module.css";
 import Image from "next/image";
-import bgImg from "@/assets/images/bgEvents.svg";
 import EventTitle from "./EventTitle";
 import EventsCards from "./EventsCards";
 import OldImg from "@/assets/images/headerEvents.png";
