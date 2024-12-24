@@ -269,13 +269,19 @@ const JoinNow = ({ events }) => {
                   />
                 </>
               )}
-
               <button
                 disabled={loading}
                 type="submit"
-                className="bg-[#75B21D] text-white py-3 px-12 rounded-[31px] block m-auto"
+                className="bg-[#75B21D] hover:bg-[#639b1a] transition-all duration-300 ease-in-out w-[300px] h-[52px] active:scale-95 text-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed block m-auto"
               >
-                {loading ? "جار الإرسال ..." : "ارسال الطلب"}
+                {loading ? (
+                  <div className="flex justify-center items-center gap-2">
+                    <span className="loader w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin"></span>
+                    جار الإرسال ...
+                  </div>
+                ) : (
+                  "ارسال الطلب"
+                )}
               </button>
             </Form>
           )}
