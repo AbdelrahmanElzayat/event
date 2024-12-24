@@ -8,7 +8,7 @@ const ActivityCard = ({ item }) => {
   const [open, setOpen] = useState(false);
   return (
     <div className="ActivityCard rounded-2xl border border-[#CECECE] p-3 lg:p-3 flex flex-col items-start justify-between gap-2 lg:gap-3">
-      <div className="imageLec h-[220px] w-full rounded-xl overflow-hidden flex justify-start items-start">
+      <div className="imageLec h-[150px] sm:h-[220px] w-full rounded-xl overflow-hidden flex justify-start items-start">
         <Image
           src={item?.image}
           alt="imageTest"
@@ -39,8 +39,13 @@ const ActivityCard = ({ item }) => {
             >
               <Image src={exclamation} alt="exclamation" />
             </div>
-            <div className="cursor-pointer" title="تقدم باللغة الانجليزية">
-              <Image src={translation} alt="translation" />
+            <div class="relative group">
+              <div class="cursor-pointer">
+                <Image src={translation} alt="translation" />
+              </div>
+              <div class="absolute left-1/2 -translate-x-1/2 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                تقدم باللغة الانجليزية
+              </div>
             </div>
             <ModalLecturer open={open} setOpen={setOpen} data={item} />
           </div>

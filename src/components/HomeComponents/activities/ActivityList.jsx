@@ -11,9 +11,9 @@ const ActivityList = ({ label, data }) => {
         </h4>
       </div>
       <div className="ListCards grid grid-cols-2 lg:grid-cols-4 gap-5">
-        {data?.map((item, i) => (
-          <ActivityCard key={i} item={item} />
-        ))}
+        {label === "المحاضرات"
+          ? data?.map((item, i) => <ActivityCard key={i} item={item} />)
+          : data?.map((item, i) => <ActivityCard key={i} item={item} />)}
       </div>
     </div>
   );

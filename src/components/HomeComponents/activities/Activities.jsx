@@ -20,6 +20,7 @@ import w8 from "@/assets/images/w8.png";
 import Image from "next/image";
 
 const Activities = () => {
+  
   const lectures = [
     {
       image: lec1,
