@@ -66,8 +66,6 @@ const JoinNow = ({ events }) => {
     }
   };
 
-  console.log(result);
-
   return (
     <section className="pb-10">
       <ModalSuccess open={open} setOpen={setOpen} data={scan} />
