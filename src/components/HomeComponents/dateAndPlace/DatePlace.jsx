@@ -11,7 +11,7 @@ const DatePlace = () => {
           {/* <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             تفاصيل المبادرة
           </span> */}
-          <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px]">
+          <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] mb-4">
             المكان والتاريخ
           </h2>
         </div>
@@ -26,7 +26,7 @@ const DatePlace = () => {
                   موقع الحدث
                 </span>
                 <h3 className="text-[16px] text-textPrimary font-bold">
-                  برج الفيصلية الرياض
+                  برج الفيصلية - الرياض
                 </h3>
                 <h3 className="text-[20px] text-textPrimary font-bold">
                   قاعة الأمير سلطان الكبرى
@@ -42,7 +42,7 @@ const DatePlace = () => {
                   التاريخ
                 </span>
                 <h3 className="text-[20px] text-textPrimary font-bold">
-                  23nd & 24rd January 2025
+                  23rd & 24th January 2025
                 </h3>
               </div>
             </div>

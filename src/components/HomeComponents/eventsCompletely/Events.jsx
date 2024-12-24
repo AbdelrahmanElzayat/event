@@ -13,7 +13,7 @@ const Events = () => {
     >
       <div className="container">
         <div
-          className={`relative flex flex-col lg:flex-row justify-between items-start lg:pl-20 bg-[#F6F1EE] rounded-[50px]`}
+          className={`relative flex flex-col lg:flex-row justify-between items-center lg:items-start lg:pl-20 bg-[#F6F1EE] rounded-[50px]`}
         >
           <div className="topEvents absolute top-0 right-0">
             <Image src={OldImg} alt="topOldImg" />

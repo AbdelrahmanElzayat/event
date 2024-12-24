@@ -12,7 +12,7 @@ const EventTitle = () => {
           أهمية الملتقى والتوقعات
         </h2>
       </div>
-      <div className="ImgEvent hidden lg:block">
+      <div className="ImgEvent block">
         <Image src={personWithCat} alt="events" style={{ maxWidth: "100%" }} />
       </div>
     </div>

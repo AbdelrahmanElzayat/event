@@ -3,8 +3,8 @@ import imageTest from "@/assets/images/lec1.png";
 import Image from "next/image";
 const ActivityCard = ({item}) => {
   return (
-    <div className="ActivityCard rounded-2xl border border-[#CECECE] p-3 lg:p-5 flex flex-col items-center justify-center gap-3 cursor-pointer">
-      <div className="imageLec h-[80px] w-full rounded-xl overflow-hidden flex justify-start items-start">
+    <div className="ActivityCard rounded-2xl border border-[#CECECE] p-3 lg:p-5 flex flex-col items-center justify-between gap-3 cursor-pointer">
+      <div className="imageLec h-[200px] w-full rounded-xl overflow-hidden flex justify-start items-start">
         <Image
           src={item?.image}
           alt="imageTest"

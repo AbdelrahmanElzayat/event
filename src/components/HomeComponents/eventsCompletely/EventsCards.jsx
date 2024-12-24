@@ -55,7 +55,7 @@ const EventsCards = () => {
   ];
   const [activeIndex, setActiveIndex] = React.useState(0);
   return (
-    <div className="EventsCards pt-10 grid grid-cols-1 lg:grid-cols-2 gap-5 basis-[50%] z-50">
+    <div className="EventsCards pt-3 lg:pt-10 grid grid-cols-1 lg:grid-cols-2 gap-5 basis-[50%] z-50 px-3">
       {events?.map((event, index) => (
         <EventCard
           event={event}
