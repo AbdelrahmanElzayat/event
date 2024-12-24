@@ -4,7 +4,7 @@ const EventCard = ({ event, isActive, onMouseEnter }) => {
   return (
     <div
       onMouseEnter={onMouseEnter}
-      className={`flex flex-col items-start justify-center gap-2 transition-all cursor-pointer p-5 rounded-[70px] py-5 ${
+      className={`flex flex-col items-start justify-center gap-2 transition-all cursor-pointer p-3 rounded-2xl py-3 ${
         isActive
           ? "bg-[#88BC3E] shadow-custom-heavy scale-105"
           : "hover:bg-[#88BC3E] hover:shadow-custom-heavy"
@@ -15,7 +15,7 @@ const EventCard = ({ event, isActive, onMouseEnter }) => {
         <Image src={event?.image} alt="" />
       </div>
       <h3
-        className={`titleEvent text-textPrimary font-bold text-sm lg:text-lg text-right pr-3 leading-[25px] mb-3 ${
+        className={`titleEvent text-textPrimary font-bold text-sm lg:text-lg text-right pr-3 leading-[25px] ${
           isActive ? "text-white" : ""
         }`}
       >

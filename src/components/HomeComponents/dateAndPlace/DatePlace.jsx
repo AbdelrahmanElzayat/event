@@ -5,13 +5,13 @@ import Image from "next/image";
 import ImgPlace from "./ImgPlace";
 const DatePlace = () => {
   return (
-    <div className="DatePlace mb-20">
+    <div className="DatePlace mb-8 lg:mb-20">
       <div className="container">
         <div className="headerDate mb-5 flex flex-col gap-4">
           {/* <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             تفاصيل المبادرة
           </span> */}
-          <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] mb-4">
+          <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] mb-4 text-center lg:text-right">
             المكان والتاريخ
           </h2>
         </div>

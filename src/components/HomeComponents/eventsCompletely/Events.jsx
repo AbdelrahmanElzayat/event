@@ -7,11 +7,11 @@ const Events = () => {
   return (
     <div
       id="Expectations"
-      className="events overflow-hidden mb-20"
+      className="events overflow-hidden mb-8 lg:mb-20"
     >
       <div className="container">
         <div
-          className={`relative flex flex-col lg:flex-row justify-between items-center lg:items-start lg:pl-20 bg-[#F6F1EE] rounded-[50px]`}
+          className={`relative flex flex-col lg:flex-row justify-between items-center  lg:pl-20 bg-[#F6F1EE] rounded-[50px] pb-4 lg:pb-0`}
         >
           <div className="topEvents absolute top-0 right-0">
             <Image src={OldImg} alt="topOldImg" />
