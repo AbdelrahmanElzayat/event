@@ -189,14 +189,12 @@ const JoinNow = ({ events }) => {
                                               );
                                             }
                                           }}
-                                          disabled={event?.data?.some(
-                                            (dataItem) =>
-                                              dataItem?.id !== item?.id && // لا تتحقق من نفس العنصر المختار
-                                              dataItem?.start_time ===
-                                                item?.start_time && // تحقق من نفس وقت البدء
-                                              dataItem?.end_time ===
-                                                item?.end_time // تحقق من نفس وقت الانتهاء
-                                          )}
+                                          // disabled={event?.data?.some(
+                                          //   (dataItem) =>
+                                          //     dataItem?.id === item?.id && // لا تتحقق من نفس العنصر المختار
+                                          //     dataItem?.start_time ===
+                                          //       item?.start_time
+                                          // )}
                                         />
                                         <div className="absolute top-0 left-0 w-5 h-5 flex items-center justify-center pointer-events-none">
                                           <svg
