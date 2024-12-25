@@ -31,7 +31,7 @@ const ActivityList = ({ label, data }) => {
       ) : label === "ورش العمـل" ? (
         <>
           <DaySection title="اليوم الأول" data={data.slice(0, 5)} />
-          <DaySection title="اليوم الثاني" data={data.slice(0, 4)} />
+          <DaySection title="اليوم الثاني" data={data.slice(5,9)} />
         </>
       ) : (
         <div className="ListCards grid grid-cols-2 lg:grid-cols-4 gap-5">
