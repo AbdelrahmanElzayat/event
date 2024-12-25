@@ -3,101 +3,50 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
 import { Autoplay, FreeMode } from "swiper/modules"; // استيراد الـ Autoplay
-import c1 from "@/assets/images/c1.png";
-import c2 from "@/assets/images/c2.png";
-import c3 from "@/assets/images/c3.png";
-import c4 from "@/assets/images/c4.png";
-import c5 from "@/assets/images/c5.png";
-import c6 from "@/assets/images/c6.png";
-import c7 from "@/assets/images/c7.png";
-import c8 from "@/assets/images/c8.png";
-import c9 from "@/assets/images/c9.png";
-import c10 from "@/assets/images/c10.png";
-import c11 from "@/assets/images/c11.png";
-import c12 from "@/assets/images/c12.png";
-import c13 from "@/assets/images/c13.png";
-import c14 from "@/assets/images/c14.png";
-import c15 from "@/assets/images/c15.png";
-import c16 from "@/assets/images/c16.png";
-import c17 from "@/assets/images/c17.png";
-import c18 from "@/assets/images/c18.png";
-import c19 from "@/assets/images/c19.png";
-import c20 from "@/assets/images/c20.png";
-import c21 from "@/assets/images/c21.png";
-import c22 from "@/assets/images/c22.png";
-import c23 from "@/assets/images/c23.png";
-import c24 from "@/assets/images/c24.png";
-import c25 from "@/assets/images/c25.png";
-import c26 from "@/assets/images/c26.png";
-import c27 from "@/assets/images/c27.png";
-import c28 from "@/assets/images/c28.png";
-import c29 from "@/assets/images/c29.png";
-import c30 from "@/assets/images/c30.png";
-import c31 from "@/assets/images/c31.png";
-import c32 from "@/assets/images/c32.png";
-import c33 from "@/assets/images/c33.png";
-import c34 from "@/assets/images/c34.png";
-import c35 from "@/assets/images/c35.png";
-import c36 from "@/assets/images/c36.png";
-import c37 from "@/assets/images/c37.png";
-import c38 from "@/assets/images/c38.png";
-import c39 from "@/assets/images/c39.png";
-import c40 from "@/assets/images/c40.png";
-import c41 from "@/assets/images/c41.png";
-import c42 from "@/assets/images/c42.png";
-import c43 from "@/assets/images/c43.png";
-import c44 from "@/assets/images/c44.png";
-import c45 from "@/assets/images/c45.png";
-
 import Image from "next/image";
 
 const Clients = () => {
   const logos = [
-    c1,
-    c2,
-    c3,
-    c4,
-    c5,
-    c6,
-    c7,
-    c8,
-    c9,
-    c10,
-    c11,
-    c12,
-    c13,
-    c14,
-    c15,
-    c16,
-    c17,
-    c18,
-    c19,
-    c20,
-    c21,
-    c22,
-    c23,
-    c24,
-    c25,
-    c26,
-    c27,
-    c28,
-    c29,
-    c30,
-    c31,
-    c32,
-    c33,
-    c34,
-    c35,
-    c36,
-    c37,
-    c38,
-    c39,
-    c40,
-    c41,
-    c42,
-    c43,
-    c44,
-    c45,
+    "https://ppte.sa/logos/brands/Applaws.png",
+    "https://ppte.sa/logos/brands/Encore.png",
+    "https://ppte.sa/logos/brands/Beaphar.png",
+    "https://ppte.sa/logos/brands/Butchers.png",
+    "https://ppte.sa/logos/brands/Acana.png",
+    "https://ppte.sa/logos/brands/Orijen.png",
+    "https://ppte.sa/logos/brands/VetsBest.png",
+    "https://ppte.sa/logos/brands/Fruitables.png",
+    "https://ppte.sa/logos/brands/Nutrivet.png",
+    "https://ppte.sa/logos/brands/Espree.png",
+    "https://ppte.sa/logos/brands/SimpleSolution.png",
+    "https://ppte.sa/logos/brands/Zupreem.png",
+    "https://ppte.sa/logos/brands/DrClauders.png",
+    "https://ppte.sa/logos/brands/Inaba.png",
+    "https://ppte.sa/logos/brands/Josera.png",
+    "https://ppte.sa/logos/brands/Bavaro.png",
+    "https://ppte.sa/logos/brands/KitCat.png",
+    "https://ppte.sa/logos/brands/WitteMolen.png",
+    "https://ppte.sa/logos/brands/Coockoo.png",
+    "https://ppte.sa/logos/brands/Cede.png",
+    "https://ppte.sa/logos/brands/ILoveHappyCats.png",
+    "https://ppte.sa/logos/brands/GardenBites.png",
+    "https://ppte.sa/logos/brands/LindoCat.png",
+    "https://ppte.sa/logos/brands/SignorGatto.png",
+    "https://ppte.sa/logos/brands/Arya.png",
+    "https://ppte.sa/logos/brands/Myfamily.png",
+    "https://ppte.sa/logos/brands/Forza10.png",
+    "https://ppte.sa/logos/brands/Babin.png",
+    "https://ppte.sa/logos/brands/NaturalCode.png",
+    "https://ppte.sa/logos/brands/Prince.png",
+    "https://ppte.sa/logos/brands/Princess.png",
+    "https://ppte.sa/logos/brands/PurinaProPlan.png",
+    "https://ppte.sa/logos/brands/Sanal.png",
+    "https://ppte.sa/logos/brands/SolidGold.png",
+    "https://ppte.sa/logos/brands/ZestyPaws.png",
+    "https://ppte.sa/logos/brands/VerseleLaga.png",
+    "https://ppte.sa/logos/brands/Core.png",
+    "https://ppte.sa/logos/brands/Whimzees.png",
+    "https://ppte.sa/logos/brands/Zolux.png",
+    "https://ppte.sa/logos/brands/BioPetActive.png",
   ];
   return (
     <div id="Exhibitors" className="container py-6 pt-20 lg:py-20">
@@ -105,8 +54,8 @@ const Clients = () => {
         العارضين
       </h3>
       <Swiper
-        spaceBetween={20}
-        slidesPerView={8} // عدد اللوجوهات اللي تظهر في وقت واحد
+        // spaceBetween={20}
+        // slidesPerView={8} // عدد اللوجوهات اللي تظهر في وقت واحد
         draggable={true}
         autoplay={{
           delay: 0, // عشان يتحرك من غير توقف
@@ -118,7 +67,7 @@ const Clients = () => {
         freeMode={true} // يخلي الحركة حرة ومستمرة
         modules={[Autoplay, FreeMode]}
         breakpoints={{
-          320: {
+          300: {
             slidesPerView: 4, // عدد اللوجوهات للشاشات الصغيرة جداً (موبايل)
             spaceBetween: 10,
           },
@@ -137,19 +86,23 @@ const Clients = () => {
         }}
         className="mt-6 lg:mt-8"
       >
-        {logos?.map((logo, i) => (
-          <SwiperSlide key={i}>
-            <Image
-              src={logo}
-              alt={`client-logo-${i}`}
-              style={{
-                width: "100%",
-                maxHeight: "100px",
-                objectFit: "contain",
-              }}
-            />
-          </SwiperSlide>
-        ))}
+        {logos?.map((logo, i) =>
+          logo ? (
+            <SwiperSlide key={i}>
+              <Image
+                src={logo}
+                alt={`client-logo-${i}`}
+                width={100}
+                height={100}
+                style={{
+                  width: "100%",
+                  maxHeight: "100px",
+                  objectFit: "contain",
+                }}
+              />
+            </SwiperSlide>
+          ) : null
+        )}
       </Swiper>
     </div>
   );

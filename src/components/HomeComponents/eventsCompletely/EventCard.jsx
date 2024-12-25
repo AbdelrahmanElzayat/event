@@ -11,9 +11,9 @@ const EventCard = ({ event, isActive, onMouseEnter }) => {
       }`}
       //   className={`flex flex-col items-start justify-center gap-2 transition-all cursor-pointer p-5 hover:bg-[#88BC3E] hover:shadow-custom-heavy hover:h-[260px] hover:w-[280px] rounded-[70px]`}
     >
-      <div className="iconEvent">
-        <Image src={event?.image} alt="" />
-      </div>
+      {/* <div className="iconEvent">
+        <Image src={event?.image} alt="eventImg" width={100} height={100} />
+      </div> */}
       <h3
         className={`titleEvent text-textPrimary font-bold text-sm lg:text-lg text-right pr-3 leading-[25px] ${
           isActive ? "text-white" : ""

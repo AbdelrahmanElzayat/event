@@ -32,19 +32,19 @@ const ActivityCard = ({ item }) => {
             </span>
           </div>
           <div className="icons flex items-center gap-4 self-end">
-            <div class="relative group">
-              <div class="cursor-pointer" onClick={() => setOpen(true)}>
+            <div className="relative group">
+              <div className="cursor-pointer" onClick={() => setOpen(true)}>
                 <Image src={exclamation} alt="exclamation" />
               </div>
-              <div class="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 معلومات عن المحاضر
               </div>
             </div>
-            <div class="relative group">
-              <div class="cursor-pointer">
+            <div className="relative group">
+              <div className="cursor-pointer">
                 <Image src={translation} alt="translation" />
               </div>
-              <div class="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 تقدم باللغة الانجليزية
               </div>
             </div>

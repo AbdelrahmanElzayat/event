@@ -5,6 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import FormInputs from "./FormInputs";
 import axios from "axios";
 import ModalSuccess from "./ModalSuccess";
+import toast from "react-hot-toast";
 const JoinNow = ({ events }) => {
   const result = Object.entries(events)?.map(([day, types]) => ({
     day,
@@ -58,9 +59,11 @@ const JoinNow = ({ events }) => {
       );
       setscan(response?.data);
       setOpen(true);
+      toast.success("تم ارسال بياناتك بنجاح")
       setLoading(false);
     } catch (error) {
-      console.error("Error sending data to API:", error);
+      toast.error("حدث خطأ ما في إرسال البيانات!");
+      // console.error("Error sending data to API:", error);
       setLoading(false);
     }
   };
