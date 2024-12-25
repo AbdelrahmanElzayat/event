@@ -6,6 +6,7 @@ import search from "@/assets/icons/Search.svg";
 import menu from "@/assets/icons/menu.svg";
 import Navbar from "./Navbar";
 import NavMobile from "./NavMobile";
+import Link from "next/link";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -14,24 +15,28 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-backgroundPrimary shadow-sm py-4 sticky top-0 left-0 w-full z-[1000]">
+    <header className="bg-backgroundPrimary shadow-sm py-2 lg:py-4 sticky top-0 left-0 w-full z-[1000]">
       <div className="container">
         <div className="headerContainer flex justify-between items-center">
-          <div className="logo flex justify-center items-center">
+          <Link
+            href={"/"}
+            onClick={() => window.scrollTo(0, 0)}
+            className="logo flex justify-center items-center"
+          >
             <Image
               src={logo}
               alt="logo"
               style={{
-                maxHeight: "114px",
+                maxHeight: "100px",
                 maxWidth: "100%",
                 objectFit: "contain",
               }}
             />
-          </div>
+          </Link>
           <div className="hidden lg:block">
             <Navbar />
           </div>
-          <div className="search cursor-pointer">
+          <div className="hidden lg:block search cursor-pointer">
             <Image src={search} alt="search" />
           </div>
           <div
