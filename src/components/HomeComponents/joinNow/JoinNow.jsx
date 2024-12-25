@@ -59,7 +59,7 @@ const JoinNow = ({ events }) => {
       );
       setscan(response?.data);
       setOpen(true);
-      toast.success("تم ارسال بياناتك بنجاح")
+      toast.success("تم ارسال بياناتك بنجاح");
       setLoading(false);
     } catch (error) {
       toast.error("حدث خطأ ما في إرسال البيانات!");
@@ -162,11 +162,11 @@ const JoinNow = ({ events }) => {
                                   {event.type}
                                 </h4>
                                 {event?.data?.map((item, itemIndex) => (
-                                  <div className={`flex flex-col items-start`}>
-                                    <label
-                                      key={item?.program?.id}
-                                      className="flex justify-between items-center gap-2 w-full cursor-pointer"
-                                    >
+                                  <div
+                                    className={`flex flex-col items-start`}
+                                    key={itemIndex}
+                                  >
+                                    <label className="flex justify-between items-center gap-2 w-full cursor-pointer">
                                       <div className="relative">
                                         <Field
                                           className="appearance-none w-5 h-5 border border-gray-400 rounded-md checked:bg-[#88BC3E] disabled:bg-gray-300"
@@ -270,7 +270,7 @@ const JoinNow = ({ events }) => {
               <button
                 disabled={loading}
                 type="submit"
-                className="bg-[#75B21D] hover:bg-[#639b1a] transition-all duration-300 ease-in-out w-[300px] h-[52px] active:scale-95 text-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed block m-auto"
+                className="bg-[#75B21D] hover:bg-[#639b1a] transition-all duration-300 ease-in-out w-[200px] sm:w-[300px] h-[52px] active:scale-95 text-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed block m-auto"
               >
                 {loading ? (
                   <div className="flex justify-center items-center gap-2">
