@@ -8,7 +8,7 @@ const EventTitle = () => {
         {/* <span className="text-textPrimary font-normal text-sm lg:text-xl">
           مخطط الحدث
         </span> */}
-        <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] w-1/2 leading-[45px]">
+        <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] lg:w-1/2 lg:leading-[45px]">
           أهمية الملتقى والتوقعات
         </h2>
       </div>
