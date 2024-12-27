@@ -1,25 +1,53 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import FormInputs from "./FormInputs";
 import axios from "axios";
 import ModalSuccess from "./ModalSuccess";
 import toast from "react-hot-toast";
-const JoinNow = ({ events }) => {
-  const result = Object.entries(events)?.map(([day, types]) => ({
-    day,
-    events: Object.entries(types)?.map(([type, data]) => ({
-      type,
-      data,
-    })),
-  }));
+// const JoinNow = ({ events }) => {
+const JoinNow = () => {
+  const [events, setEvents] = useState([]);
+  const [loadingEvent, setLoadingEvent] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchEvents() {
+      try {
+        setLoadingEvent(true);
+        const response = await axios.get(
+          "https://hub.ppte.sa/event_handler/api/events"
+        );
+        setEvents(response.data); // تعيين البيانات المستلمة
+        setLoadingEvent(false); // تعيين حالة التحميل إلى false بعد جلب البيانات
+      } catch (err) {
+        toast.error("حدث خطأ في جلب الفعاليات");
+        setLoadingEvent(false);
+      } finally {
+        setLoadingEvent(false);
+      }
+    }
+
+    fetchEvents(); // استدعاء الدالة لجلب البيانات
+  }, []); // سيتم استدعاء الدالة عند تحميل الصفحة فقط
+
+  const result = events
+    ? Object.entries(events)?.map(([day, types]) => ({
+        day,
+        events: Object.entries(types)?.map(([type, data]) => ({
+          type,
+          data,
+        })),
+      }))
+    : null;
 
   const [selectedDay, setSelectedDay] = useState([]);
 
   const [open, setOpen] = useState(false);
   const [scan, setscan] = useState(``);
   const [loading, setLoading] = useState(false);
+  const [android, setIsAndroid] = useState(false);
 
   const initialValues = {
     fullName: "",
@@ -55,6 +83,9 @@ const JoinNow = ({ events }) => {
           email: values?.email,
           is_vip: 0,
           schedule_ids: values?.selectedSessions,
+        },
+        {
+          responseType: "blob",
         }
       );
       setscan(response?.data);
@@ -65,12 +96,27 @@ const JoinNow = ({ events }) => {
       toast.error("حدث خطأ ما في إرسال البيانات!");
       // console.error("Error sending data to API:", error);
       setLoading(false);
+    } finally {
+      setLoading(false);
     }
   };
 
+  useEffect(() => {
+    // التأكد من أن الكود يعمل على المتصفح فقط
+    if (typeof window !== "undefined") {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const isAndroid = /android/i.test(userAgent); // التحقق مباشرة
+      setIsAndroid(isAndroid); // تحديث الحالة إذا كان الجهاز أندرويد
+
+      const pdfUrl = scan ? URL.createObjectURL(scan) : null;
+      if (pdfUrl && isAndroid) {
+        window.open(pdfUrl, "_blank");
+      }
+    }
+  }, [scan]);
   return (
     <section className="pb-10">
-      <ModalSuccess open={open} setOpen={setOpen} data={scan} />
+      {!android && <ModalSuccess open={open} setOpen={setOpen} data={scan} />}
       <div className="container">
         <div className="joinHeader flex flex-col justify-center items-center mb-12">
           {/* <span className="text-textPrimary text-xl font-normal text-center">
@@ -143,12 +189,20 @@ const JoinNow = ({ events }) => {
                           <span className="flex-1 text-textPrimary text-[16px] font-bold">
                             {item?.day === "day1"
                               ? "اليوم الأول"
-                              : "اليوم الثاني"}
+                              : item?.day === "day2"
+                              ? "اليوم الثاني"
+                              : item?.day === "training"
+                              ? "الجلسات التدريبية"
+                              : ""}
                           </span>
                           <span className="font-light text-textPrimary text-lg">
                             {item?.day === "day1"
                               ? "٢٣ يناير ٢٠٢٥"
-                              : "٢٤ يناير ٢٠٢٥"}
+                              : item?.day === "day2"
+                              ? "٢٤ يناير ٢٠٢٥"
+                              : item?.day === "training"
+                              ? "٢٣ يناير ٢٠٢٥ ~ ٢٥ يناير ٢٠٢٥"
+                              : ""}
                           </span>
                         </label>
                         <div>

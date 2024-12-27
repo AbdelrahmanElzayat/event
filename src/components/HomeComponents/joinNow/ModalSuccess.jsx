@@ -7,7 +7,9 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 
-export default function ModalSuccess({ open, setOpen,data }) {
+export default function ModalSuccess({ open, setOpen, data }) {
+  const pdfUrl = data ? URL.createObjectURL(data) : null;
+
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-50">
       <DialogBackdrop
@@ -22,20 +24,36 @@ export default function ModalSuccess({ open, setOpen,data }) {
             className="relative p-5 transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
             <div className="bg-white pb-4 pt-5">
-              <div>
+              <div className="text-center sm:mt-0 flex flex-col justify-center items-center">
+                {pdfUrl ? (
+                  <iframe
+                    src={pdfUrl}
+                    width="100%"
+                    height="500px"
+                    className="border rounded-lg"
+                    title="PDF Viewer"
+                  />
+                ) : (
+                  <p>لا يوجد مستند PDF للعرض.</p>
+                )}
+              </div>
+              {/* <div>
                 <div className="mt-3 text-center sm:mt-0 flex flex-col justify-center items-center">
                   <div dangerouslySetInnerHTML={{ __html: data }} />
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="bg-gray-50 px-4 py-3 flex flex-row sm:px-6 justify-center items-center gap-3">
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
+              <a
+                href={pdfUrl}
+                target="blank"
+                download="file.pdf"
                 className="inline-flex flex-1 justify-center rounded-lg bg-[#88BC3E] py-2 text-sm font-semibold text-black shadow-sm hover:bg-[#88BC3Ebc]sm:ml-3 sm:w-auto"
+                // type="button"
+                // onClick={() => window.open(pdfUrl, "_blank")}
               >
-                تأكيـد
-              </button>
+                تنزيل
+              </a>
               <button
                 type="button"
                 data-autofocus

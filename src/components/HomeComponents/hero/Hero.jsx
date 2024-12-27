@@ -4,7 +4,7 @@ import aicats from "@/assets/images/aicats.png";
 import scrollOld from "@/assets/images/scrollImg.png";
 const Hero = () => {
   return (
-    <section className="hero bg-backgroundPrimary pt-10">
+    <section className="hero bg-backgroundPrimary pt-12 lg:pt-16">
       <div className="hidden lg:block absolute -top-12 -right-3 z-[10000]">
         <Image src={scrollOld} alt="scrollOld" />
       </div>
@@ -22,7 +22,7 @@ const Hero = () => {
                 <p className="text-center text-textSecondary text-sm opacity-90 leading-5 font-light">
                   هو حدث حصري مخصص لقطاع الحيوانات الأليفة في المملكة العربية
                   السعودية. سيوفر هذا الحدث بيئة تجارية مناسبة للعملاء وممثلي
-                  الشركاتمن موردي العلامات التجارية بغرض استعراض المنتجات، بناء
+                  الشركات من موردي العلامات التجارية بغرض استعراض المنتجات، بناء
                   قنوات التواصل، بناء القدرات، تبادل التطلعات واستكشاف الفرص
                   التجارية ونمو الأعمال.
                 </p>

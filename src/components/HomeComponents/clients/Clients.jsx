@@ -3,39 +3,47 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
 import { Autoplay, FreeMode } from "swiper/modules"; // استيراد الـ Autoplay
+import brandLogo from "@/assets/images/brandLogo.png";
 import Image from "next/image";
-
 const Clients = () => {
   const logos = [
     "https://ppte.sa/logos/brands/Applaws.png",
-    "https://ppte.sa/logos/brands/Encore.png",
+    brandLogo,
+    // "https://ppte.sa/logos/brands/Encore.png",
     "https://ppte.sa/logos/brands/Beaphar.png",
     "https://ppte.sa/logos/brands/Butchers.png",
-    "https://ppte.sa/logos/brands/Acana.png",
-    "https://ppte.sa/logos/brands/Orijen.png",
+    // "https://ppte.sa/logos/brands/Acana.png",
+    // "https://ppte.sa/logos/brands/Orijen.png",
     "https://ppte.sa/logos/brands/VetsBest.png",
     "https://ppte.sa/logos/brands/Fruitables.png",
     "https://ppte.sa/logos/brands/Nutrivet.png",
+    // brandLogo,
     "https://ppte.sa/logos/brands/Espree.png",
     "https://ppte.sa/logos/brands/SimpleSolution.png",
     "https://ppte.sa/logos/brands/Zupreem.png",
+    // brandLogo,
     "https://ppte.sa/logos/brands/DrClauders.png",
     "https://ppte.sa/logos/brands/Inaba.png",
     "https://ppte.sa/logos/brands/Josera.png",
+    brandLogo,
     "https://ppte.sa/logos/brands/Bavaro.png",
     "https://ppte.sa/logos/brands/KitCat.png",
     "https://ppte.sa/logos/brands/WitteMolen.png",
-    "https://ppte.sa/logos/brands/Coockoo.png",
+    // brandLogo,
+    // "https://ppte.sa/logos/brands/Coockoo.png",
     "https://ppte.sa/logos/brands/Cede.png",
     "https://ppte.sa/logos/brands/ILoveHappyCats.png",
     "https://ppte.sa/logos/brands/GardenBites.png",
+    // brandLogo,
     "https://ppte.sa/logos/brands/LindoCat.png",
     "https://ppte.sa/logos/brands/SignorGatto.png",
-    "https://ppte.sa/logos/brands/Arya.png",
+    // "https://ppte.sa/logos/brands/Arya.png",
     "https://ppte.sa/logos/brands/Myfamily.png",
+    // brandLogo,
     "https://ppte.sa/logos/brands/Forza10.png",
     "https://ppte.sa/logos/brands/Babin.png",
-    "https://ppte.sa/logos/brands/NaturalCode.png",
+    brandLogo,
+    // "https://ppte.sa/logos/brands/NaturalCode.png",
     "https://ppte.sa/logos/brands/Prince.png",
     "https://ppte.sa/logos/brands/Princess.png",
     "https://ppte.sa/logos/brands/PurinaProPlan.png",
@@ -43,10 +51,11 @@ const Clients = () => {
     "https://ppte.sa/logos/brands/SolidGold.png",
     "https://ppte.sa/logos/brands/ZestyPaws.png",
     "https://ppte.sa/logos/brands/VerseleLaga.png",
-    "https://ppte.sa/logos/brands/Core.png",
-    "https://ppte.sa/logos/brands/Whimzees.png",
+    // brandLogo,
+    // "https://ppte.sa/logos/brands/Core.png",
+    // "https://ppte.sa/logos/brands/Whimzees.png",
     "https://ppte.sa/logos/brands/Zolux.png",
-    "https://ppte.sa/logos/brands/BioPetActive.png",
+    // "https://ppte.sa/logos/brands/BioPetActive.png",
   ];
   return (
     <div id="Exhibitors" className="container py-6 pt-20 lg:py-20">
@@ -91,7 +100,7 @@ const Clients = () => {
             <SwiperSlide key={i}>
               <Image
                 src={logo}
-                alt={`client-logo-${i}`}
+                alt={`brand-logo-${i}`}
                 width={100}
                 height={100}
                 style={{

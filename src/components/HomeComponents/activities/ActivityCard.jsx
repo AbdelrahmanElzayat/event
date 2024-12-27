@@ -4,8 +4,10 @@ import Image from "next/image";
 import exclamation from "@/assets/icons/exclamation.svg";
 import translation from "@/assets/icons/translation.svg";
 import ModalLecturer from "./ModalLecturer";
-const ActivityCard = ({ item }) => {
+const ActivityCard = ({ item, label }) => {
   const [open, setOpen] = useState(false);
+  console.log(label);
+  
   return (
     <div className="ActivityCard rounded-2xl border border-[#CECECE] p-3 lg:p-3 flex flex-col items-start justify-between gap-2 lg:gap-3">
       <div className="imageLec h-[150px] sm:h-[220px] w-full rounded-xl overflow-hidden flex justify-start items-start">
@@ -45,7 +47,11 @@ const ActivityCard = ({ item }) => {
                 <Image src={translation} alt="translation" />
               </div>
               <div className="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                تقدم باللغة الانجليزية
+                {label === "المحاضرات"
+                  ? "يوجد ترجمة فورية للغة العربية"
+                  : label === "الدورات"
+                  ? "تقدم باللغة الانجليزية"
+                  : ""}
               </div>
             </div>
             <ModalLecturer open={open} setOpen={setOpen} data={item} />

@@ -26,9 +26,11 @@ const Header = () => {
             <Image
               src={logo}
               alt="logo"
+              width={100}
+              height={100}
               style={{
                 maxHeight: "100px",
-                maxWidth: "100%",
+                maxWidth: "80px",
                 objectFit: "contain",
               }}
             />
