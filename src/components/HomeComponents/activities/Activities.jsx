@@ -193,17 +193,6 @@ const Activities = () => {
     fetchEvents(); // استدعاء الدالة لجلب البيانات
   }, []); // سيتم استدعاء الدالة عند تحميل الصفحة فقط
 
-  // const result = events
-  //   ? Object.entries(events)?.map(([day, types]) => ({
-  //       day,
-  //       events: Object.entries(types)?.map(([type, data]) => ({
-  //         type,
-  //         data,
-  //       })),
-  //     }))
-  //   : null;
-
-  console.log(events);
 
   return (
     <div id="events" className="Activities mb-20 relative">

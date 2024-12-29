@@ -35,17 +35,17 @@ const ActivityCard = ({ item, label }) => {
               {item?.location}
             </span>
           </div>
-          {(label === "المحاضرات" || label === "الدورات") && (
-            <div className="icons flex items-center gap-4 self-end">
-              <div className="relative group">
-                <div className="cursor-pointer" onClick={() => setOpen(true)}>
-                  <Image src={exclamation} alt="exclamation" />
-                </div>
-                <div className="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  معلومات عن المحاضر
-                </div>
+          <div className="icons flex items-center gap-4 self-end">
+            <div className="relative group">
+              <div className="cursor-pointer" onClick={() => setOpen(true)}>
+                <Image src={exclamation} alt="exclamation" />
               </div>
+              <div className="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                معلومات عن المحاضر
+              </div>
+            </div>
 
+            {(label === "المحاضرات" || label === "الدورات") && (
               <div className="relative group">
                 <div className="cursor-pointer">
                   <Image src={translation} alt="translation" />
@@ -58,14 +58,14 @@ const ActivityCard = ({ item, label }) => {
                     : ""}
                 </div>
               </div>
+            )}
 
-              <ModalLecturer
-                open={open}
-                setOpen={setOpen}
-                data={item?.presenter || item}
-              />
-            </div>
-          )}
+            <ModalLecturer
+              open={open}
+              setOpen={setOpen}
+              data={item?.presenter || item}
+            />
+          </div>
         </>
       )}
     </div>

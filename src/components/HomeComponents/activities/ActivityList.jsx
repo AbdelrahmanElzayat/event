@@ -1,5 +1,6 @@
 import React from "react";
 import ActivityCard from "./ActivityCard";
+import Image from "next/image";
 
 const DaySection = ({ title, data, label }) => (
   <div className="mb-8">
@@ -15,11 +16,11 @@ const DaySection = ({ title, data, label }) => (
 );
 
 const ActivityList = ({ label, data, lecture1, lecture2 }) => {
-  console.log(lecture1);
-  
+  // console.log(lecture1);
+
   return (
     <div className="ActivityCards">
-      <div className="activityHeader flex items-center gap-4 mb-6">
+      <div className="activityHeader flex items-center gap-4 mb-4">
         <span className="w-[6px] h-[18px] bg-[#88BC3E] rounded-[15px]"></span>
         <h4 className="label text-textPrimary font-bold lg:font-extrabold text-lg lg:text-[22px] text-right">
           {label}
@@ -42,6 +43,16 @@ const ActivityList = ({ label, data, lecture1, lecture2 }) => {
         </>
       ) : label === "ورش العمـل" || label === "ورش العمل (المجال البيطري )" ? (
         <>
+          <div className="flex items-center gap-2">
+            <h4>تقدم من قبل شركة الجودة الالمانية للتجارة</h4>
+            <Image
+              src={"https://ppte.sa/logos/suppliers/GSGroup.png"}
+              width={100}
+              height={100}
+              alt="logo"
+              className="rounded-full w-16 h-14"
+            />
+          </div>
           <DaySection
             title="اليوم الأول"
             // data={data.slice(0, 5)}
