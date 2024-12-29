@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ActivityList from "./ActivityList";
 
 import scrollImg from "@/assets/images/scrollCourses.png";
@@ -18,6 +18,8 @@ import w6 from "@/assets/images/w6.png";
 import w7 from "@/assets/images/w7.png";
 import w8 from "@/assets/images/w8.png";
 import Image from "next/image";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 const Activities = () => {
   const lectures = [
@@ -112,9 +114,9 @@ const Activities = () => {
   const courses = [
     {
       image: lec5,
-      title: "دليل الرعاية الصحية لجلد وشعر القطط والكلاب",
+      title: "دليل الرعاية الصحية لجلد وشعر القطط والكلاب (يومين)",
       lecturer: "د/ جينيفر بيشوب",
-      location: " الولايات المتحدة",
+      // location: " الولايات المتحدة",
       des: `
   تتمتع السيدة جينيفر بيشوب بخبرة تزيد عن أربعة عقود في مجال تجميل ورعاية الحيوانات الأليفة، مع عملها على إنتاج سلالات متعددة من الكلاب والقطط.
   تحمل شهادة خبيرة تجميل دولية معتمدة في مجال الحيوانات الأليفة، ولديها خبرة واسعة في علم وتاريخ الكلاب واحتياجات رعاية الحيوانات الأليفة ذات الصلة بأنواع الجلد والفراء المختلفة.
@@ -166,6 +168,43 @@ const Activities = () => {
       title: "اعتلال الكلى المزمن لدى القطط",
     },
   ];
+
+  const [events, setEvents] = useState([]);
+  const [loadingEvent, setLoadingEvent] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchEvents() {
+      try {
+        setLoadingEvent(true);
+        const response = await axios.get(
+          "https://hub.ppte.sa/event_handler/api/events"
+        );
+        setEvents(response.data); // تعيين البيانات المستلمة
+        setLoadingEvent(false); // تعيين حالة التحميل إلى false بعد جلب البيانات
+      } catch (err) {
+        toast.error("حدث خطأ في جلب الفعاليات");
+        setLoadingEvent(false);
+      } finally {
+        setLoadingEvent(false);
+      }
+    }
+
+    fetchEvents(); // استدعاء الدالة لجلب البيانات
+  }, []); // سيتم استدعاء الدالة عند تحميل الصفحة فقط
+
+  // const result = events
+  //   ? Object.entries(events)?.map(([day, types]) => ({
+  //       day,
+  //       events: Object.entries(types)?.map(([type, data]) => ({
+  //         type,
+  //         data,
+  //       })),
+  //     }))
+  //   : null;
+
+  console.log(events);
+
   return (
     <div id="events" className="Activities mb-20 relative">
       <div className="scrollCourses hidden lg:block absolute right-0 top-[100px]">
@@ -184,9 +223,24 @@ const Activities = () => {
           </h2>
         </div>
         <div className="activitiesList flex flex-col items-start gap-7 mt-5 lg:mt-16">
-          <ActivityList label="المحاضرات" data={lectures} />
+          <ActivityList
+            // label="المحاضرات"
+            data={lectures}
+            label={events?.day1?.المحاضرات[0]?.program?.type ?? "المحاضرات"}
+            lecture1={events?.day1?.المحاضرات}
+            lecture2={events?.day2?.المحاضرات}
+          />
           <ActivityList label="الدورات" data={courses} />
-          <ActivityList label="ورش العمـل" data={workShops} />
+          <ActivityList
+            // label="ورش العمـل"
+            data={workShops}
+            label={
+              events?.day1?.["ورش العمل (المجال البيطري )"]?.[0]?.program
+                ?.type ?? "ورش العمـل"
+            }
+            lecture1={events?.day1?.["ورش العمل (المجال البيطري )"]}
+            lecture2={events?.day2?.["ورش العمل (المجال البيطري )"]}
+          />
         </div>
       </div>
     </div>

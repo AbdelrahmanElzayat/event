@@ -7,14 +7,16 @@ const DaySection = ({ title, data, label }) => (
       {title}
     </h2>
     <div className="ListCards grid grid-cols-2 lg:grid-cols-4 gap-5">
-      {data.map((item, i) => (
+      {data?.map((item, i) => (
         <ActivityCard key={i} item={item} label={label} />
       ))}
     </div>
   </div>
 );
 
-const ActivityList = ({ label, data }) => {
+const ActivityList = ({ label, data, lecture1, lecture2 }) => {
+  console.log(lecture1);
+  
   return (
     <div className="ActivityCards">
       <div className="activityHeader flex items-center gap-4 mb-6">
@@ -27,25 +29,29 @@ const ActivityList = ({ label, data }) => {
         <>
           <DaySection
             title="اليوم الأول"
-            data={data.slice(0, 4)}
+            // data={data.slice(0, 4)}
+            data={lecture1}
             label={label}
           />
           <DaySection
             title="اليوم الثاني"
-            data={data.slice(4, 8)}
+            // data={data.slice(4, 8)}
+            data={lecture2}
             label={label}
           />
         </>
-      ) : label === "ورش العمـل" ? (
+      ) : label === "ورش العمـل" || label === "ورش العمل (المجال البيطري )" ? (
         <>
           <DaySection
             title="اليوم الأول"
-            data={data.slice(0, 5)}
+            // data={data.slice(0, 5)}
+            data={lecture1}
             label={label}
           />
           <DaySection
             title="اليوم الثاني"
-            data={data.slice(5, 9)}
+            // data={data.slice(5, 9)}
+            data={lecture2}
             label={label}
           />
         </>

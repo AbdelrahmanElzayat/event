@@ -212,7 +212,13 @@ const JoinNow = () => {
                                 key={index}
                                 className={`rounded-[22px] bg-backgroundBlue p-5 mt-6 mb-4`}
                               >
-                                <h4 className="font-semibold mb-4">
+                                <h4 className="font-semibold mb-4 flex flex-col items-start gap-1">
+                                  <span className="text-textSecondary">
+                                    {event.type === "الدورات" ||
+                                    event.type === "ورش العمل (المجال البيطري )"
+                                      ? "( الأماكن محدودة وخاضعة للتأكيد من قبلنا )"
+                                      : ""}
+                                  </span>
                                   {event.type}
                                 </h4>
                                 {event?.data?.map((item, itemIndex) => (
@@ -274,21 +280,24 @@ const JoinNow = () => {
                                         <span className="text-textPrimary text-sm font-bold mb-3">
                                           {item?.program.topic_title}
                                         </span>
-                                        <div className="relative flex items-center gap-2">
-                                          <span className="text-[#7D7D7D] text-[11px] font-normal">
-                                            المحاضر{" "}
-                                            <span className="text-[#323232] font-bold">
-                                              {item?.presenter?.name}
+                                        {item?.program.topic_title !==
+                                          "المعرض المصاحب" && (
+                                          <div className="relative flex items-center gap-2">
+                                            <span className="text-[#7D7D7D] text-[11px] font-normal">
+                                              المحاضر{" "}
+                                              <span className="text-[#323232] font-bold">
+                                                {item?.presenter?.name}
+                                              </span>
                                             </span>
-                                          </span>
-                                          <span className="w-[1px] h-[10px] bg-[#707070]"></span>
-                                          <span className="text-[#7D7D7D] text-[11px] font-normal">
-                                            القاعة{" "}
-                                            <span className="text-[#323232] font-bold">
-                                              {item?.location}
+                                            <span className="w-[1px] h-[10px] bg-[#707070]"></span>
+                                            <span className="text-[#7D7D7D] text-[11px] font-normal">
+                                              القاعة{" "}
+                                              <span className="text-[#323232] font-bold">
+                                                {item?.location}
+                                              </span>
                                             </span>
-                                          </span>
-                                        </div>
+                                          </div>
+                                        )}
                                       </div>
                                       <span className="text-sm font-light text-textPrimary rounded-[10px] bg-[#CAD2D0] py-2 px-3">
                                         {item.start_time

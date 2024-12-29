@@ -2,7 +2,7 @@
 
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import Image from "next/image";
-import linkedIn from "@/assets/icons/linkedIn.svg";
+// import linkedIn from "@/assets/icons/linkedIn.svg";
 export default function ModalLecturer({ open, setOpen, data }) {
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-50">
@@ -23,6 +23,8 @@ export default function ModalLecturer({ open, setOpen, data }) {
                   <div className="imageLecturer h-[250px] rounded-xl overflow-hidden">
                     <Image
                       src={data?.image}
+                      width={100}
+                      height={100}
                       style={{
                         width: "100%",
                         height: "100%",
@@ -32,14 +34,14 @@ export default function ModalLecturer({ open, setOpen, data }) {
                   </div>
                   <div className="detailsLecturer">
                     <h2 className="font-bold text-lg text-textPrimary mb-3">
-                      {data?.lecturer}
+                      {data?.name ?? data?.lecturer}
                     </h2>
                     <p className="text-sm font-normal text-textSecondary">
-                      {data?.des}
+                      {data?.resume ?? data?.des}
                     </p>
-                    <a href={`${data?.social}`} target="blank">
+                    {/* <a href={`${data?.social}`} target="blank">
                       <Image src={linkedIn} alt="linkedIn" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
