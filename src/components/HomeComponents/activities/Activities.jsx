@@ -215,7 +215,7 @@ const Activities = () => {
             مناسبات خاصة
           </span> */}
           <h2
-            className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] text-center"
+            className="heading text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] text-center"
             style={{ textAlign: lang === "ar" ? "right" : "left" }}
           >
             {t("accompanyingActivities")}

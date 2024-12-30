@@ -25,7 +25,7 @@ const ActivityList = ({ label, data, lecture1, lecture2 }) => {
       <div className="activityHeader flex items-center gap-4 mb-4">
         <span className="w-[6px] h-[18px] bg-[#88BC3E] rounded-[15px]"></span>
         <h4
-          className="label text-textPrimary font-bold lg:font-extrabold text-lg lg:text-[22px]"
+          className="heading label text-textPrimary font-bold lg:font-extrabold text-lg lg:text-[22px] heading"
           style={{ textAlign: lang === "ar" ? "right" : "left" }}
         >
           {label}

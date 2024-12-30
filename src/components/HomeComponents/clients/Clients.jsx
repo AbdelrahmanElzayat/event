@@ -64,7 +64,7 @@ const Clients = () => {
   return (
     <div id="Exhibitors" className="container py-6 pt-20 lg:py-20">
       <h3
-        className="text-textPrimary font-extrabold text-xl text-center"
+        className="text-textPrimary font-extrabold text-xl text-center heading"
         style={{ textAlign: lang === "ar" ? "right" : "left" }}
       >
         {t("exhibitors")}

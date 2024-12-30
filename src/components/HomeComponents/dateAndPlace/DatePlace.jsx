@@ -16,7 +16,7 @@ const DatePlace = () => {
             تفاصيل المبادرة
           </span> */}
           <h2
-            className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] mb-4 text-center"
+            className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] mb-4 text-center heading"
             style={{ textAlign: lang === "ar" ? "right" : "left" }}
           >
             {t("locationAndDate")}
