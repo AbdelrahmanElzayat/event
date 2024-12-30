@@ -116,6 +116,8 @@ const JoinNow = () => {
       }
     }
   }, [scan]);
+  console.log(result);
+  
   return (
     <section className="pb-10">
       {!android && <ModalSuccess open={open} setOpen={setOpen} data={scan} />}
@@ -215,7 +217,9 @@ const JoinNow = () => {
                                 className={`rounded-[22px] bg-backgroundBlue p-5 mt-6 mb-4`}
                               >
                                 <h4 className="font-semibold mb-4 flex flex-col items-start gap-1">
-                                  {lang === "ar" ? event?.type : event?.type_en}
+                                  {lang === "ar"
+                                    ? event?.data[0]?.program?.type
+                                    : event?.data[0]?.program?.type_en}
                                   <span className="text-[10px] text-red-500">
                                     {event.type === "الدورات" ||
                                     event.type === "ورش العمل (المجال البيطري )"
