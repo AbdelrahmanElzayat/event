@@ -1,6 +1,8 @@
+import { LanguageContext } from "@/context/LanguageContext";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 const EventCard = ({ event, isActive, onMouseEnter }) => {
+  const { lang } = useContext(LanguageContext);
   return (
     <div
       onMouseEnter={onMouseEnter}
@@ -18,6 +20,7 @@ const EventCard = ({ event, isActive, onMouseEnter }) => {
         className={`titleEvent text-textPrimary font-bold text-sm lg:text-lg text-right pr-3 leading-[25px] ${
           isActive ? "text-white" : ""
         }`}
+        style={{ textAlign: lang === "ar" ? "right" : "left" }}
       >
         {event?.title}
       </h3>
