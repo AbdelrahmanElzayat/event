@@ -23,7 +23,7 @@ const ActivityCard = ({ item, label }) => {
       </div>
       <div className="activityContent lg:w-[80%]">
         <p
-          className="text-textPrimary text-xs md:text-[16px] font-bold leading-5 heading"
+          className="text-textPrimary text-xs md:text-[16px] font-bold leading-5"
           style={{ textAlign: lang === "ar" ? "right" : "left" }}
         >
           {/* {item?.title} */}
