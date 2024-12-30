@@ -6,8 +6,10 @@ import FormInputs from "./FormInputs";
 import axios from "axios";
 import ModalSuccess from "./ModalSuccess";
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 // const JoinNow = ({ events }) => {
 const JoinNow = () => {
+  const { t } = useTranslation();
   const [events, setEvents] = useState([]);
   const [loadingEvent, setLoadingEvent] = useState(false);
   const [error, setError] = useState(null);
@@ -123,7 +125,7 @@ const JoinNow = () => {
             مهتم بالفعل؟
           </span> */}
           <h2 className="text-xl lg:text-[40px] font-extrabold text-textPrimary">
-            انضم الآن
+            {t("joinNow")}
           </h2>
         </div>
         <Formik
@@ -142,9 +144,9 @@ const JoinNow = () => {
                 <>
                   {/* الجزء الثاني */}
                   <h5 className="text-sm font-normal text-textPrimary mb-4 flex justify-between items-center">
-                    الأيام المراد الحضور فيها
+                    {t("attendanceDays")}
                     <span className="text-[13px] font-light text-textPrimary">
-                      مطلوب
+                      {t("required")}
                     </span>
                   </h5>
 
@@ -188,20 +190,20 @@ const JoinNow = () => {
 
                           <span className="flex-1 text-textPrimary text-[16px] font-bold">
                             {item?.day === "day1"
-                              ? "اليوم الأول"
+                              ? t("firstDay")
                               : item?.day === "day2"
-                              ? "اليوم الثاني"
+                              ? t("secondDay")
                               : item?.day === "training"
-                              ? "الجلسات التدريبية"
+                              ? t("trainingSessions")
                               : ""}
                           </span>
                           <span className="font-light text-textPrimary text-lg">
                             {item?.day === "day1"
-                              ? "٢٣ يناير ٢٠٢٥"
+                              ? t("dateJanuary23")
                               : item?.day === "day2"
-                              ? "٢٤ يناير ٢٠٢٥"
+                              ? t("dateJanuary24")
                               : item?.day === "training"
-                              ? "٢٣ يناير ٢٠٢٥ ~ ٢٥ يناير ٢٠٢٥"
+                              ? t("eventDuration")
                               : ""}
                           </span>
                         </label>
@@ -284,14 +286,14 @@ const JoinNow = () => {
                                           "المعرض المصاحب" && (
                                           <div className="relative flex items-center gap-2">
                                             <span className="text-[#7D7D7D] text-[11px] font-normal">
-                                              المحاضر{" "}
+                                              {t("lecturer")}{" "}
                                               <span className="text-[#323232] font-bold">
                                                 {item?.presenter?.name}
                                               </span>
                                             </span>
                                             <span className="w-[1px] h-[10px] bg-[#707070]"></span>
                                             <span className="text-[#7D7D7D] text-[11px] font-normal">
-                                              القاعة{" "}
+                                              {t("halll")}{" "}
                                               <span className="text-[#323232] font-bold">
                                                 {item?.location}
                                               </span>

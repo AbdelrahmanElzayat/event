@@ -41,5 +41,25 @@
   "contactUs": "Contact Us",
 
   "allRightsReserved": "All Rights Reserved©",
-  "companyName": "Animal Products Company"
+  "companyName": "Animal Products Company",
+  "joinNow": "Join Now",
+  "attendanceDays": "Days to Attend",
+  "required": "Required",
+  "trainingSessions": "Training Sessions",
+  "dateJanuary24": "January 24, 2025",
+  "dateJanuary23": "January 23, 2025",
+  "eventDuration": "January 23, 2025 ~ January 25, 2025",
+  "halll": "Hall",
+  "sending": "Sending ...",
+  "submitRequest": "Submit Request",
+  "fetchError": "Error Fetching Events",
+  "nameRequired": "Name is Required",
+  "entityRequired": "Entity is Required",
+  "positionRequired": "Position is Required",
+  "phoneRequired": "Phone Number is Required",
+  "invalidEmail": "Invalid Email Address",
+  "emailRequired": "Email is Required",
+  "chooseDaysActivities": "Please choose the day(s) and accompanying activities",
+  "dataSentSuccessfully": "Your data has been successfully sent",
+  "dataSendError": "An error occurred while sending data!"
 }

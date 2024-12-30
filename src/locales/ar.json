@@ -37,9 +37,29 @@
   "lecturerInfo": "معلومات عن المحاضر",
   "return": "عودة",
 
-  "contactUs" :"تواصل معنا",
+  "contactUs": "تواصل معنا",
 
   "allRightsReserved": "جميع الحقوق محفوظة©",
-  "companyName" :"شركة منتجات الحيوان"
+  "companyName": "شركة منتجات الحيوان",
 
+  "joinNow": "انضم الآن",
+  "attendanceDays": "الأيام المراد الحضور فيها",
+  "required": "مطلوب",
+  "trainingSessions": "الجلسات التدريبية",
+  "dateJanuary24": "٢٤ يناير ٢٠٢٥",
+  "dateJanuary23": "٢٣ يناير ٢٠٢٥",
+  "eventDuration": "٢٣ يناير ٢٠٢٥ ~ ٢٥ يناير ٢٠٢٥",
+  "halll": "القاعة",
+  "sending": "جار الإرسال ...",
+  "submitRequest": "ارسال الطلب",
+  "fetchError": "حدث خطأ في جلب الفعاليات",
+  "nameRequired": "الاسم مطلوب",
+  "entityRequired": "الجهة مطلوبة",
+  "positionRequired": "الوظيفة مطلوبة",
+  "phoneRequired": "رقم الجوال مطلوب",
+  "invalidEmail": "بريد إلكتروني غير صالح",
+  "emailRequired": "البريد الإلكتروني مطلوب",
+  "chooseDaysActivities": "نرجوا اختيار اليوم / الأيام  والأنشطة المصاحبة",
+  "dataSentSuccessfully": "تم ارسال بياناتك بنجاح",
+  "dataSendError": "حدث خطأ ما في إرسال البيانات!"
 }
