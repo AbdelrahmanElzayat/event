@@ -1,14 +1,11 @@
 "use client";
 
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
+import { useTranslation } from "react-i18next";
 
 export default function ModalSuccess({ open, setOpen, data }) {
   const pdfUrl = data ? URL.createObjectURL(data) : null;
+  const { t } = useTranslation();
 
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-50">
@@ -52,7 +49,7 @@ export default function ModalSuccess({ open, setOpen, data }) {
                 // type="button"
                 // onClick={() => window.open(pdfUrl, "_blank")}
               >
-                تنزيل
+                {t("download")}
               </a>
               <button
                 type="button"
@@ -60,7 +57,7 @@ export default function ModalSuccess({ open, setOpen, data }) {
                 onClick={() => setOpen(false)}
                 className="inline-flex flex-1 border-none outline-none justify-center rounded-lg bg-[#F3F6F5] py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 sm:mt-0 sm:w-auto"
               >
-                عودة
+                {t("return")}
               </button>
             </div>
           </DialogPanel>

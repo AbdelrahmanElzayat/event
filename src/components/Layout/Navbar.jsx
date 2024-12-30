@@ -6,7 +6,7 @@ const Navbar = () => {
   const { t } = useTranslation();
   return (
     <nav className={`${style.navbar}`}>
-      <ul className="flex items-center justify-center gap-16">
+      <ul className="flex items-center justify-center gap-8">
         <li>
           <Link
             href={"/"}

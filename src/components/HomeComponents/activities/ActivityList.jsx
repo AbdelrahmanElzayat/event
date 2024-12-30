@@ -26,7 +26,7 @@ const ActivityList = ({ label, data, lecture1, lecture2 }) => {
           {label}
         </h4>
       </div>
-      {label === "المحاضرات" || label === "Lectures" || label === "الدورات" ? (
+      {label === "المحاضرات" || label === "Lectures" || label === "الدورات" || label === "Courses" ? (
         <>
           <DaySection
             title={t("firstDay")}

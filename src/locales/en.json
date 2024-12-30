@@ -6,7 +6,7 @@
   "descHero": "It is an exclusive event dedicated to the pet care sector in Saudi Arabia. This event will provide a business-friendly environment for clients and company representatives from brand suppliers to showcase products, build communication channels, develop capabilities, exchange aspirations, and explore business opportunities and growth.",
   "aboutHero": "About the Forum",
   "exhibitors": "Exhibitors",
-  "importance": "Importance of the Forum and Expectations",
+  "importance": "Importance of the Forum",
 
   "importanceAndExpectations": [
     {
@@ -61,5 +61,14 @@
   "emailRequired": "Email is Required",
   "chooseDaysActivities": "Please choose the day(s) and accompanying activities",
   "dataSentSuccessfully": "Your data has been successfully sent",
-  "dataSendError": "An error occurred while sending data!"
+  "dataSendError": "An error occurred while sending data!",
+  "fullName": "Full Name",
+  "organization": "Organization",
+  "jobTitle": "Job Title",
+  "mobileNumber": "Mobile Number",
+  "email": "Email",
+  "download": "Download",
+
+  "instantTranslation": "Instant translation to Arabic is available",
+  "languageOffered": "Offered in English"
 }

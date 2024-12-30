@@ -53,16 +53,19 @@ const ActivityCard = ({ item, label }) => {
               </div>
             </div>
 
-            {(label === "المحاضرات" || label === "الدورات") && (
+            {(label === "المحاضرات" ||
+              label === "الدورات" ||
+              label === "Lectures" ||
+              label === "Courses") && (
               <div className="relative group">
                 <div className="cursor-pointer">
                   <Image src={translation} alt="translation" />
                 </div>
                 <div className="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {label === "المحاضرات"
-                    ? "يوجد ترجمة فورية للغة العربية"
-                    : label === "الدورات"
-                    ? "تقدم باللغة الانجليزية"
+                  {label === "المحاضرات" || label === "Lectures"
+                    ? t("instantTranslation")
+                    : (label === "الدورات" || label === "Courses")
+                    ? t("languageOffered")
                     : ""}
                 </div>
               </div>

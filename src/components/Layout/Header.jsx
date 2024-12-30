@@ -4,6 +4,8 @@ import React, { useContext, useState } from "react";
 import logo from "@/assets/images/logo.png";
 import search from "@/assets/icons/Search.svg";
 import menu from "@/assets/icons/menu.svg";
+import arIcon from "@/assets/icons/arIcon.svg";
+import enIcon from "@/assets/icons/enIcon.svg";
 import Navbar from "./Navbar";
 import NavMobile from "./NavMobile";
 import Link from "next/link";
@@ -56,12 +58,16 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-2">
             <button onClick={toggleLang}>
-              {lang === "en" ? "عربي" : "English"}{" "}
+              {lang === "en" ? (
+                <Image src={arIcon} alt="عربي" />
+              ) : (
+                <Image src={enIcon} alt="ENGLISH" />
+              )}{" "}
               {/* عرض النص بناءً على اللغة الحالية */}
             </button>
-            <div className="hidden lg:block search cursor-pointer">
+            {/* <div className="hidden lg:block search cursor-pointer">
               <Image src={search} alt="search" />
-            </div>
+            </div> */}
             <div
               className="menuIcon block lg:hidden cursor-pointer"
               onClick={toggleMobileMenu}

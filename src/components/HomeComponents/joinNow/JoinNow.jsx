@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import FormInputs from "./FormInputs";
@@ -7,9 +7,11 @@ import axios from "axios";
 import ModalSuccess from "./ModalSuccess";
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
+import { LanguageContext } from "@/context/LanguageContext";
 // const JoinNow = ({ events }) => {
 const JoinNow = () => {
   const { t } = useTranslation();
+  const { lang } = useContext(LanguageContext);
   const [events, setEvents] = useState([]);
   const [loadingEvent, setLoadingEvent] = useState(false);
   const [error, setError] = useState(null);
@@ -60,16 +62,14 @@ const JoinNow = () => {
     selectedSessions: [],
   };
   const validationSchema = Yup.object({
-    fullName: Yup.string().required("الاسم مطلوب"),
-    organization: Yup.string().required("الجهة مطلوبة"),
-    jobTitle: Yup.string().required("الوظيفة مطلوبة"),
-    phone: Yup.string().required("رقم الجوال مطلوب"),
-    email: Yup.string()
-      .email("بريد إلكتروني غير صالح")
-      .required("البريد الإلكتروني مطلوب"),
+    fullName: Yup.string().required(t("nameRequired")),
+    organization: Yup.string().required(t("entityRequired")),
+    jobTitle: Yup.string().required(t("positionRequired")),
+    phone: Yup.string().required(t("phoneRequired")),
+    email: Yup.string().email(t("invalidEmail")).required(t("emailRequired")),
     selectedSessions: Yup.array()
-      .min(1, "نرجوا اختيار اليوم / الأيام  والأنشطة المصاحبة")
-      .required("نرجوا اختيار اليوم / الأيام  والأنشطة المصاحبة"),
+      .min(1, t("chooseDaysActivities"))
+      .required(t("chooseDaysActivities")),
   });
 
   const handleSubmit = async (values) => {
@@ -215,11 +215,11 @@ const JoinNow = () => {
                                 className={`rounded-[22px] bg-backgroundBlue p-5 mt-6 mb-4`}
                               >
                                 <h4 className="font-semibold mb-4 flex flex-col items-start gap-1">
-                                  {event.type}
+                                  {lang === "ar" ? event?.type : event?.type_en}
                                   <span className="text-textSecondary text-xs">
                                     {event.type === "الدورات" ||
                                     event.type === "ورش العمل (المجال البيطري )"
-                                      ? "( الأماكن محدودة وخاضعة للتأكيد من قبلنا )"
+                                      ? t("limitedAvailability")
                                       : ""}
                                   </span>
                                 </h4>
@@ -280,7 +280,9 @@ const JoinNow = () => {
                                       </div>
                                       <div className="flex-1">
                                         <span className="text-textPrimary text-sm font-bold mb-3">
-                                          {item?.program.topic_title}
+                                          {lang === "ar"
+                                            ? item?.program.topic_title
+                                            : item?.program.topic_title_en}
                                         </span>
                                         {item?.program.topic_title !==
                                           "المعرض المصاحب" && (
@@ -288,14 +290,18 @@ const JoinNow = () => {
                                             <span className="text-[#7D7D7D] text-[11px] font-normal">
                                               {t("lecturer")}{" "}
                                               <span className="text-[#323232] font-bold">
-                                                {item?.presenter?.name}
+                                                {lang === "ar"
+                                                  ? item?.presenter?.name
+                                                  : item?.presenter?.name_en}
                                               </span>
                                             </span>
                                             <span className="w-[1px] h-[10px] bg-[#707070]"></span>
                                             <span className="text-[#7D7D7D] text-[11px] font-normal">
                                               {t("halll")}{" "}
                                               <span className="text-[#323232] font-bold">
-                                                {item?.location}
+                                                {lang === "ar"
+                                                  ? item?.location
+                                                  : item?.location_ar}
                                               </span>
                                             </span>
                                           </div>
