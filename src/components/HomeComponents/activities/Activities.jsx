@@ -228,7 +228,12 @@ const Activities = () => {
             lecture2={events?.day2?.المحاضرات}
           />
           <ActivityList
-            label="الدورات"
+            // label="الدورات"
+            label={
+              lang === "ar"
+                ? events?.day1?.الدورات[0]?.program?.type ?? "الدورات"
+                : events?.day1?.الدورات[0]?.program?.type_en ?? "Courses"
+            }
             data={courses}
             lecture1={events?.day1?.الدورات}
             lecture2={events?.day2?.الدورات}
