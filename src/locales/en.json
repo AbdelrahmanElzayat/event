@@ -36,6 +36,7 @@
   "workshops": "Workshops (Veterinary Field)",
   "provider": "Provided by the German Quality Group",
   "lecturer": "Lecturer",
-  "lecturerInfo":"Lecturer Information",
-  "return" :"Return"
+  "lecturerInfo": "Lecturer Information",
+  "return": "Return",
+  "contactUs": "Contact Us"
 }

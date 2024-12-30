@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const NavMobile = ({ closeMenu }) => {
+  const { t } = useTranslation();
   const links = [
-    { href: "/", label: "عن الملتقى" },
-    { href: "#Expectations", label: "أهمية الملتقى و التوقعات" },
-    { href: "#Exhibitors", label: "العارضيـن" },
-    { href: "#events", label: "الأنشطة المصاحبة" },
-    { href: "#contact-us", label: "تواصل معنا" },
+    { href: "/", label: t("aboutHero") },
+    { href: "#Expectations", label: t("importance") },
+    { href: "#Exhibitors", label: t("exhibitors") },
+    { href: "#events", label: t("accompanyingActivities") },
+    { href: "#contact-us", label: t("contactUs") },
   ];
 
   const pathname = usePathname();

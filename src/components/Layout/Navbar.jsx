@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import style from "./header.module.css";
+import { useTranslation } from "react-i18next";
 const Navbar = () => {
+  const { t } = useTranslation();
   return (
     <nav className={`${style.navbar}`}>
       <ul className="flex items-center justify-center gap-16">
@@ -11,7 +13,7 @@ const Navbar = () => {
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
             onClick={() => window.scrollTo(0, 0)}
           >
-            عن الملتقى
+            {t("aboutHero")}
           </Link>
         </li>
         <li>
@@ -19,7 +21,7 @@ const Navbar = () => {
             href={"#Expectations"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            أهمية الملتقى و التوقعات
+            {t("importance")}
           </Link>
         </li>
         <li>
@@ -27,7 +29,7 @@ const Navbar = () => {
             href={"#Exhibitors"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            العارضيـن
+            {t("exhibitors")}
           </Link>
         </li>
         <li>
@@ -35,7 +37,7 @@ const Navbar = () => {
             href={"#events"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            الأنشطة المصاحبة
+            {t("accompanyingActivities")}
           </Link>
         </li>
         <li>
@@ -43,7 +45,7 @@ const Navbar = () => {
             href={"#contact-us"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            تواصل معنا
+            {t("contactUs")}
           </Link>
         </li>
       </ul>
