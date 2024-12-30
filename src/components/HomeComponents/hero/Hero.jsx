@@ -4,7 +4,7 @@ import aicats from "@/assets/images/aicats.png";
 import scrollOld from "@/assets/images/scrollImg.png";
 import { useTranslation } from "react-i18next";
 import { LanguageContext } from "@/context/LanguageContext";
-import style from './Hero.module.css'
+import style from "./Hero.module.css";
 const Hero = () => {
   const { t } = useTranslation();
   const { lang } = useContext(LanguageContext);
@@ -18,7 +18,10 @@ const Hero = () => {
       </div>
       <div className="container">
         <div className="heroContainer flex flex-col lg:flex-row gap-12 justify-between items-center">
-          <h1 className="basis-[40%] text-textPrimary text-2xl xs:text-3xl md:text-4xl lg:text-[60px] text-center lg:text-right font-extrabold capitalize lg:leading-[65px]">
+          <h1
+            className="basis-[40%] text-textPrimary text-2xl xs:text-3xl md:text-4xl lg:text-[60px] text-center lg:text-right font-extrabold capitalize lg:leading-[65px]"
+            style={{ textAlign: lang === "ar" ? "right" : "left" }}
+          >
             {/* ملتقى نخبة الأعمال في قطاع رعاية الحيوانات الأليفة */}
             {t("titleHero")}
           </h1>
@@ -39,7 +42,10 @@ const Hero = () => {
                   {t("descHero")}
                 </p>
               </div>
-              <div className="aiCats relative top-12 z-50" style={{transform: lang === "en" ? "scaleX(-1)" : ""}}>
+              <div
+                className="aiCats relative top-12 z-50"
+                style={{ transform: lang === "en" ? "scaleX(-1)" : "" }}
+              >
                 <Image src={aicats} alt="cats" />
               </div>
             </div>

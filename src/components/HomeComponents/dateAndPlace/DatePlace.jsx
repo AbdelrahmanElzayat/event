@@ -15,7 +15,10 @@ const DatePlace = () => {
           {/* <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             تفاصيل المبادرة
           </span> */}
-          <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] mb-4 text-center lg:text-justify">
+          <h2
+            className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] mb-4 text-center"
+            style={{ textAlign: lang === "ar" ? "right" : "left" }}
+          >
             {t("locationAndDate")}
           </h2>
         </div>

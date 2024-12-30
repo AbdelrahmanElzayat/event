@@ -200,7 +200,10 @@ const Activities = () => {
 
   return (
     <div id="events" className="Activities mb-20 relative">
-      <div className="scrollCourses hidden lg:block absolute top-[100px]" style={{right: lang === "ar" ? '0' : '98%'}}>
+      <div
+        className="scrollCourses hidden lg:block absolute top-[100px]"
+        style={{ right: lang === "ar" ? "0" : "98%" }}
+      >
         <Image src={scrollImg} alt="" />
         <Image src={scrollImg} alt="" />
         <Image src={scrollImg} alt="" />
@@ -211,7 +214,10 @@ const Activities = () => {
           {/* <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             مناسبات خاصة
           </span> */}
-          <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] text-center lg:text-justify">
+          <h2
+            className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] text-center"
+            style={{ textAlign: lang === "ar" ? "right" : "left" }}
+          >
             {t("accompanyingActivities")}
           </h2>
         </div>

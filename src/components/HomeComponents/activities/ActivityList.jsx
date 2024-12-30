@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import ActivityCard from "./ActivityCard";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { LanguageContext } from "@/context/LanguageContext";
 
 const DaySection = ({ title, data, label }) => (
   <div className="mb-8">
@@ -17,16 +18,23 @@ const DaySection = ({ title, data, label }) => (
 );
 
 const ActivityList = ({ label, data, lecture1, lecture2 }) => {
+  const { lang } = useContext(LanguageContext);
   const { t } = useTranslation();
   return (
     <div className="ActivityCards">
       <div className="activityHeader flex items-center gap-4 mb-4">
         <span className="w-[6px] h-[18px] bg-[#88BC3E] rounded-[15px]"></span>
-        <h4 className="label text-textPrimary font-bold lg:font-extrabold text-lg lg:text-[22px] text-justify">
+        <h4
+          className="label text-textPrimary font-bold lg:font-extrabold text-lg lg:text-[22px]"
+          style={{ textAlign: lang === "ar" ? "right" : "left" }}
+        >
           {label}
         </h4>
       </div>
-      {label === "المحاضرات" || label === "Lectures" || label === "الدورات" || label === "Courses" ? (
+      {label === "المحاضرات" ||
+      label === "Lectures" ||
+      label === "الدورات" ||
+      label === "Courses" ? (
         <>
           <DaySection
             title={t("firstDay")}

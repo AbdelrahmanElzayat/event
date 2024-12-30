@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
 import { Autoplay, FreeMode } from "swiper/modules"; // استيراد الـ Autoplay
 import brandLogo from "@/assets/images/brandLogo.png";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { LanguageContext } from "@/context/LanguageContext";
 const Clients = () => {
   const logos = [
     "https://ppte.sa/logos/brands/Applaws.png",
@@ -59,9 +60,13 @@ const Clients = () => {
     // "https://ppte.sa/logos/brands/BioPetActive.png",
   ];
   const { t } = useTranslation();
+  const { lang } = useContext(LanguageContext);
   return (
     <div id="Exhibitors" className="container py-6 pt-20 lg:py-20">
-      <h3 className="text-textPrimary font-extrabold text-xl text-center lg:text-justify">
+      <h3
+        className="text-textPrimary font-extrabold text-xl text-center"
+        style={{ textAlign: lang === "ar" ? "right" : "left" }}
+      >
         {t("exhibitors")}
       </h3>
       <Swiper

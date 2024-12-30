@@ -22,7 +22,10 @@ const ActivityCard = ({ item, label }) => {
         />
       </div>
       <div className="activityContent lg:w-[80%]">
-        <p className="text-textPrimary text-xs md:text-[16px] font-bold text-justify leading-5">
+        <p
+          className="text-textPrimary text-xs md:text-[16px] font-bold leading-5"
+          style={{ textAlign: lang === "ar" ? "right" : "left" }}
+        >
           {/* {item?.title} */}
           {lang === "ar"
             ? item?.program?.topic_title ?? item?.title
@@ -64,7 +67,7 @@ const ActivityCard = ({ item, label }) => {
                 <div className="absolute left-0 -bottom-10 w-fit text-nowrap p-2 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {label === "المحاضرات" || label === "Lectures"
                     ? t("instantTranslation")
-                    : (label === "الدورات" || label === "Courses")
+                    : label === "الدورات" || label === "Courses"
                     ? t("languageOffered")
                     : ""}
                 </div>
