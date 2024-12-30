@@ -7,7 +7,7 @@ const NavMobile = ({ closeMenu }) => {
   const { t } = useTranslation();
   const links = [
     { href: "/", label: t("aboutHero") },
-    { href: "#Expectations", label: t("importance") },
+    { href: "#Expectations", label: t("importanceNav") },
     { href: "#Exhibitors", label: t("exhibitors") },
     { href: "#events", label: t("accompanyingActivities") },
     { href: "#contact-us", label: t("contactUs") },

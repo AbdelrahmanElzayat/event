@@ -21,7 +21,7 @@ const Navbar = () => {
             href={"#Expectations"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            {t("importance")}
+            {t("importanceNav")}
           </Link>
         </li>
         <li>
