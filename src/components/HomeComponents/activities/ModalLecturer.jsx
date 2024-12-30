@@ -1,9 +1,14 @@
 "use client";
 
+import { LanguageContext } from "@/context/LanguageContext";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import Image from "next/image";
+import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 // import linkedIn from "@/assets/icons/linkedIn.svg";
 export default function ModalLecturer({ open, setOpen, data }) {
+  const { lang } = useContext(LanguageContext);
+  const { t } = useTranslation();
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-50">
       <DialogBackdrop
@@ -34,10 +39,14 @@ export default function ModalLecturer({ open, setOpen, data }) {
                   </div>
                   <div className="detailsLecturer">
                     <h2 className="font-bold text-lg text-textPrimary mb-3">
-                      {data?.name ?? data?.lecturer}
+                      {lang === "ar"
+                        ? data?.name ?? data?.lecturer
+                        : data?.name_en ?? data?.lecturer}
                     </h2>
                     <p className="text-sm font-normal text-textSecondary">
-                      {data?.resume ?? data?.des}
+                      {lang === "ar"
+                        ? data?.resume ?? data?.des
+                        : data?.resume_en ?? data?.des}
                     </p>
                     {/* <a href={`${data?.social}`} target="blank">
                       <Image src={linkedIn} alt="linkedIn" />
@@ -52,7 +61,7 @@ export default function ModalLecturer({ open, setOpen, data }) {
                 onClick={() => setOpen(false)}
                 className="bg-[#75B21D] hover:bg-[#639b1a] transition-all duration-300 ease-in-out w-[300px] h-[52px] active:scale-95 text-white font-semibold text-lg rounded-full shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed block m-auto"
               >
-                عودة
+                {t("return")}
               </button>
             </div>
           </DialogPanel>

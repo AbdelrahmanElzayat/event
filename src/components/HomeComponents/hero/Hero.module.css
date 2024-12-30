@@ -1,0 +1,18 @@
+.catsContent {
+  right: 0;
+}
+@media (min-width: 1024px) {
+  .catsContent {
+    right: -20%;
+  }
+}
+
+.catsContent_en {
+  left: 0;
+}
+@media (min-width: 1024px) {
+  .catsContent_en {
+    left: -20%;
+  }
+}
+

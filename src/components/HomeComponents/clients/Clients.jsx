@@ -5,6 +5,7 @@ import "swiper/css/free-mode";
 import { Autoplay, FreeMode } from "swiper/modules"; // استيراد الـ Autoplay
 import brandLogo from "@/assets/images/brandLogo.png";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 const Clients = () => {
   const logos = [
     "https://ppte.sa/logos/brands/Applaws.png",
@@ -57,10 +58,11 @@ const Clients = () => {
     "https://ppte.sa/logos/brands/Zolux.png",
     // "https://ppte.sa/logos/brands/BioPetActive.png",
   ];
+  const { t } = useTranslation();
   return (
     <div id="Exhibitors" className="container py-6 pt-20 lg:py-20">
-      <h3 className="text-textPrimary font-extrabold text-xl text-center lg:text-right">
-        العارضين
+      <h3 className="text-textPrimary font-extrabold text-xl text-center lg:text-justify">
+        {t("exhibitors")}
       </h3>
       <Swiper
         // spaceBetween={20}
@@ -94,6 +96,7 @@ const Clients = () => {
           },
         }}
         className="mt-6 lg:mt-8"
+        dir="ltr"
       >
         {logos?.map((logo, i) =>
           logo ? (

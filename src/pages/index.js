@@ -5,6 +5,10 @@ import DatePlace from "@/components/HomeComponents/dateAndPlace/DatePlace";
 import Events from "@/components/HomeComponents/eventsCompletely/Events";
 import Hero from "@/components/HomeComponents/hero/Hero";
 import JoinNow from "@/components/HomeComponents/joinNow/JoinNow";
+import { LanguageContext } from "@/context/LanguageContext";
+import i18n from "@/i18n";
+import { useContext, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export async function getStaticProps() {
   const response = await fetch("https://hub.ppte.sa/event_handler/api/events", {
@@ -35,8 +39,18 @@ export async function getStaticProps() {
 //   };
 // }
 export default function Home({ events }) {
+  const { lang } = useContext(LanguageContext);
+  const { t } = useTranslation();
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const langLocal = localStorage.getItem("lang");
+      if (langLocal && ["en", "ar"].includes(langLocal)) {
+        i18n.changeLanguage(langLocal); // Set the language from local storage
+      }
+    }
+  }, []);
   return (
-    <div className="home">
+    <div className="home" dir={lang === "ar" ? "rtl" : "ltr"}>
       <Hero />
       <Clients />
       <Events />

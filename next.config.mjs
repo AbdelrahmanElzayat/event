@@ -5,6 +5,7 @@ const nextConfig = {
     domains: ["ppte.sa"],
     unoptimized: true,
   },
+
 };
 
 export default nextConfig;

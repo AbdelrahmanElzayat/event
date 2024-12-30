@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ActivityList from "./ActivityList";
 
 import scrollImg from "@/assets/images/scrollCourses.png";
@@ -20,8 +20,13 @@ import w8 from "@/assets/images/w8.png";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+import { LanguageContext } from "@/context/LanguageContext";
 
 const Activities = () => {
+  const { t } = useTranslation();
+  const { lang } = useContext(LanguageContext);
+
   const lectures = [
     {
       image: lec1,
@@ -193,10 +198,9 @@ const Activities = () => {
     fetchEvents(); // استدعاء الدالة لجلب البيانات
   }, []); // سيتم استدعاء الدالة عند تحميل الصفحة فقط
 
-
   return (
     <div id="events" className="Activities mb-20 relative">
-      <div className="scrollCourses hidden lg:block absolute right-0 top-[100px]">
+      <div className="scrollCourses hidden lg:block absolute top-[100px]" style={{right: lang === "ar" ? '0' : '98%'}}>
         <Image src={scrollImg} alt="" />
         <Image src={scrollImg} alt="" />
         <Image src={scrollImg} alt="" />
@@ -207,25 +211,36 @@ const Activities = () => {
           {/* <span className="text-textPrimary font-normal text-sm lg:text-[20px]">
             مناسبات خاصة
           </span> */}
-          <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] text-center lg:text-right">
-            الأنشطة المصاحبة
+          <h2 className="text-textPrimary font-bold lg:font-extrabold text-2xl lg:text-[40px] text-center lg:text-justify">
+            {t("accompanyingActivities")}
           </h2>
         </div>
         <div className="activitiesList flex flex-col items-start gap-7 mt-5 lg:mt-16">
           <ActivityList
             // label="المحاضرات"
             data={lectures}
-            label={events?.day1?.المحاضرات[0]?.program?.type ?? "المحاضرات"}
+            label={
+              lang === "ar"
+                ? events?.day1?.المحاضرات[0]?.program?.type ?? "المحاضرات"
+                : events?.day1?.المحاضرات[0]?.program?.type_en ?? "Lectures"
+            }
             lecture1={events?.day1?.المحاضرات}
             lecture2={events?.day2?.المحاضرات}
           />
-          <ActivityList label="الدورات" data={courses} />
           <ActivityList
-            // label="ورش العمـل"
+            label="الدورات"
+            data={courses}
+            lecture1={events?.day1?.الدورات}
+            lecture2={events?.day2?.الدورات}
+          />
+          <ActivityList
             data={workShops}
             label={
-              events?.day1?.["ورش العمل (المجال البيطري )"]?.[0]?.program
-                ?.type ?? "ورش العمـل"
+              lang === "ar"
+                ? events?.day1?.["ورش العمل (المجال البيطري )"]?.[0]?.program
+                    ?.type ?? "ورش العمل (المجال البيطري )"
+                : events?.day1?.["ورش العمل (المجال البيطري )"]?.program
+                    ?.type_en ?? "Workshops (Veterinary Field)"
             }
             lecture1={events?.day1?.["ورش العمل (المجال البيطري )"]}
             lecture2={events?.day2?.["ورش العمل (المجال البيطري )"]}

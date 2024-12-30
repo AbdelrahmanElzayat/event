@@ -213,13 +213,13 @@ const JoinNow = () => {
                                 className={`rounded-[22px] bg-backgroundBlue p-5 mt-6 mb-4`}
                               >
                                 <h4 className="font-semibold mb-4 flex flex-col items-start gap-1">
-                                  <span className="text-textSecondary">
+                                  {event.type}
+                                  <span className="text-textSecondary text-xs">
                                     {event.type === "الدورات" ||
                                     event.type === "ورش العمل (المجال البيطري )"
                                       ? "( الأماكن محدودة وخاضعة للتأكيد من قبلنا )"
                                       : ""}
                                   </span>
-                                  {event.type}
                                 </h4>
                                 {event?.data?.map((item, itemIndex) => (
                                   <div
