@@ -24,7 +24,7 @@ const JoinNow = () => {
         setEvents(response.data); // تعيين البيانات المستلمة
         setLoadingEvent(false); // تعيين حالة التحميل إلى false بعد جلب البيانات
       } catch (err) {
-        toast.error("حدث خطأ في جلب الفعاليات");
+        toast.error(t("fetchError"));
         setLoadingEvent(false);
       } finally {
         setLoadingEvent(false);
@@ -92,10 +92,10 @@ const JoinNow = () => {
       );
       setscan(response?.data);
       setOpen(true);
-      toast.success("تم ارسال بياناتك بنجاح");
+      toast.success(t("dataSentSuccessfully"));
       setLoading(false);
     } catch (error) {
-      toast.error("حدث خطأ ما في إرسال البيانات!");
+      toast.error(t("dataSendError"));
       // console.error("Error sending data to API:", error);
       setLoading(false);
     } finally {
@@ -340,10 +340,10 @@ const JoinNow = () => {
                 {loading ? (
                   <div className="flex justify-center items-center gap-2">
                     <span className="loader w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin"></span>
-                    جار الإرسال ...
+                    {t("sending")}
                   </div>
                 ) : (
-                  "ارسال الطلب"
+                  t("submitRequest")
                 )}
               </button>
             </Form>
