@@ -216,7 +216,7 @@ const JoinNow = () => {
                               >
                                 <h4 className="font-semibold mb-4 flex flex-col items-start gap-1">
                                   {lang === "ar" ? event?.type : event?.type_en}
-                                  <span className="text-textSecondary text-xs">
+                                  <span className="text-[10px] text-red-500">
                                     {event.type === "الدورات" ||
                                     event.type === "ورش العمل (المجال البيطري )"
                                       ? t("limitedAvailability")
