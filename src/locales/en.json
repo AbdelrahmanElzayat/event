@@ -3,7 +3,7 @@
   "about": "About Us",
 
   "titleHeroOld": "Elite Business Forum in the Pet Care Sector",
-  "titleHero": " Innovative Pet Expo Event Saudi Arabia",
+  "titleHero": "Paws & Partners Event",
   "descHero": "Paws and Partners is an Exclusive B2B Event dedicated to the vibrant Saudi Arabian pet industry. Hosted by PPTCO, this inaugural event transcends our annual ceremony by providing a specialized platform for suppliers and key account customers to converge, exchange knowledge, and explore opportunities.",
   "aboutHero": "About the Event",
 
@@ -22,9 +22,9 @@
     { "title": "Signing commercial agreements with brands" },
     { "title": "Brand-specific training sessions" },
     {
-      "title": "Lectures presented by top speakers and global managers in the sector"
+      "title": "Lectures presented by distinguished speakers and global trainers in the sector"
     },
-    { "title": "Meeting and discussing directly with brand owners" },
+    { "title": "Meeting and discussing directly with brand representatives" },
     { "title": "Workshops and professional courses for sector workers" }
   ],
   "locationAndDate": "Venue and Date",
@@ -33,7 +33,7 @@
   "hall": "Prince Sultan Grand Hall",
   "date": "Date",
   "time": "Time",
-  "exhibitionTime": "Accompanying Exhibition Time",
+  "exhibitionTime": "Exhibition Time",
 
   "accompanyingActivities": "Explore Our Event Activities",
   "lectures": "Lectures",
