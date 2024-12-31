@@ -13,7 +13,7 @@ const Navbar = () => {
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
             onClick={() => window.scrollTo(0, 0)}
           >
-            {t("aboutHero")}
+            {t("aboutNav")}
           </Link>
         </li>
         <li>
@@ -29,7 +29,7 @@ const Navbar = () => {
             href={"#Exhibitors"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            {t("exhibitors")}
+            {t("exhibitorsNav")}
           </Link>
         </li>
         <li>
@@ -37,7 +37,7 @@ const Navbar = () => {
             href={"#events"}
             className="text-textPrimary opacity-90 text-sm font-normal uppercase"
           >
-            {t("accompanyingActivities")}
+            {t("accompanyingActivitiesNav")}
           </Link>
         </li>
         <li>

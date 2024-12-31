@@ -6,7 +6,6 @@
   "aboutHero": "عن الملتقى",
   "exhibitors": "العارضين",
   "importance": "أهمية الملتقى والتوقعات",
-  "importanceNav": "أهمية الملتقى والتوقعات",
 
   "importanceAndExpectations": [
     {
@@ -73,5 +72,10 @@
   "email": "البريد الإلكتروني",
 
   "instantTranslation": "يوجد ترجمة فورية للغة العربية",
-  "languageOffered": "تقدم باللغة الإنجليزية"
+  "languageOffered": "تقدم باللغة الإنجليزية",
+
+  "importanceNav": "أهمية الملتقى والتوقعات",
+  "aboutNav": "عن الملتقى",
+  "exhibitorsNav": "العارضين",
+  "accompanyingActivitiesNav": "الأنشطة المصاحبة"
 }

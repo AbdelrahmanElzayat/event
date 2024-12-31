@@ -6,10 +6,10 @@ import { useTranslation } from "react-i18next";
 const NavMobile = ({ closeMenu }) => {
   const { t } = useTranslation();
   const links = [
-    { href: "/", label: t("aboutHero") },
+    { href: "/", label: t("aboutNav") },
     { href: "#Expectations", label: t("importanceNav") },
-    { href: "#Exhibitors", label: t("exhibitors") },
-    { href: "#events", label: t("accompanyingActivities") },
+    { href: "#Exhibitors", label: t("exhibitorsNav") },
+    { href: "#events", label: t("accompanyingActivitiesNav") },
     { href: "#contact-us", label: t("contactUs") },
   ];
 
