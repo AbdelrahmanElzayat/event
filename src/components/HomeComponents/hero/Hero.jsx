@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="container">
         <div className="heroContainer flex flex-col lg:flex-row gap-12 justify-between items-center">
           <h1
-            className="basis-[40%] text-textPrimary text-2xl xs:text-3xl md:text-4xl lg:text-[60px] text-center lg:text-right font-extrabold capitalize lg:leading-[65px] heading"
+            className="basis-[35%] text-textPrimary text-2xl xs:text-3xl md:text-4xl lg:text-[60px] text-center lg:text-right font-extrabold capitalize lg:leading-[65px] heading"
             style={{ textAlign: lang === "ar" ? "right" : "left" }}
           >
             {/* ملتقى نخبة الأعمال في قطاع رعاية الحيوانات الأليفة */}
