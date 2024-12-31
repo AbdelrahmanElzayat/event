@@ -43,11 +43,11 @@ export default function ModalLecturer({ open, setOpen, data }) {
                         ? data?.name ?? data?.lecturer
                         : data?.name_en ?? data?.lecturer}
                     </h2>
-                    <p className="text-sm font-normal text-textSecondary">
+                    <bdi className="text-sm font-normal text-textSecondary">
                       {lang === "ar"
                         ? data?.resume ?? data?.des
                         : data?.resume_en ?? data?.des}
-                    </p>
+                    </bdi>
                     {/* <a href={`${data?.social}`} target="blank">
                       <Image src={linkedIn} alt="linkedIn" />
                     </a> */}
