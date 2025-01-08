@@ -6,7 +6,6 @@
   "aboutHero": "عن الملتقى",
   "exhibitors": "العارضين",
   "importance": "أهمية الملتقى والتوقعات",
-
   "importanceAndExpectations": [
     {
       "title": "توفير ارفف ذكية جذابة للعلامات التجارية داخل المتاجر وتوقيع خطط تسويقية مشتركة"
@@ -26,7 +25,6 @@
   "date": "التاريخ",
   "time": "وقت المعرض المصاحب",
   "exhibitionTime": "وقت المعرض المصاحب",
-
   "accompanyingActivities": "الأنشطة المصاحبة",
   "lectures": "المحاضرات",
   "firstDay": "اليوم الأول",
@@ -39,16 +37,14 @@
   "return": "عودة",
   "download": "تنزيل",
   "contactUs": "تواصل معنا",
-
   "allRightsReserved": "جميع الحقوق محفوظة©",
   "companyName": "شركة منتجات الحيوان",
-
   "joinNow": "انضم الآن",
   "attendanceDays": "الأيام المراد الحضور فيها",
   "required": "مطلوب",
   "trainingSessions": "الجلسات التدريبية",
-  "dateJanuary24": "٢٤ يناير ٢٠٢٥",
   "dateJanuary23": "٢٣ يناير ٢٠٢٥",
+  "dateJanuary24": "٢٤ يناير ٢٠٢٥",
   "eventDuration": "٢٣ يناير ٢٠٢٥ ~ ٢٥ يناير ٢٠٢٥",
   "halll": "القاعة",
   "sending": "جار الإرسال ...",
@@ -64,16 +60,13 @@
   "dataSentSuccessfully": "تم ارسال بياناتك بنجاح",
   "dataSendError": "حدث خطأ ما في إرسال البيانات!",
   "limitedAvailability": "( الأماكن محدودة وخاضعة للتأكيد )",
-
   "fullName": "الاسم بالكامل",
   "organization": "المنشأة",
   "jobTitle": "الوظيفة",
   "mobileNumber": "رقم الجوال",
   "email": "البريد الإلكتروني",
-
   "instantTranslation": "يوجد ترجمة فورية للغة العربية",
   "languageOffered": "تقدم باللغة الإنجليزية",
-
   "importanceNav": "أهمية الملتقى والتوقعات",
   "aboutNav": "عن الملتقى",
   "exhibitorsNav": "العارضين",

@@ -5,6 +5,7 @@ import DatePlace from "@/components/HomeComponents/dateAndPlace/DatePlace";
 import Events from "@/components/HomeComponents/eventsCompletely/Events";
 import Hero from "@/components/HomeComponents/hero/Hero";
 import JoinNow from "@/components/HomeComponents/joinNow/JoinNow";
+import Scanner from "@/components/HomeComponents/scanner/Scanner";
 import { LanguageContext } from "@/context/LanguageContext";
 import i18n from "@/i18n";
 import { useContext, useEffect, useState } from "react";
@@ -58,6 +59,7 @@ export default function Home({ events }) {
       <Activities />
       {/* <JoinNow events={events} /> */}
       <JoinNow />
+      <Scanner/>
     </div>
   );
 }

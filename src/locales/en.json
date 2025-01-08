@@ -1,20 +1,16 @@
 {
   "welcome": "Welcome to our website",
   "about": "About Us",
-
   "titleHeroOld": "Elite Business Forum in the Pet Care Sector",
   "titleHero": "Paws & Partners Event",
   "descHero": "Paws and Partners is an Exclusive B2B Event dedicated to the vibrant Saudi Arabian pet industry. Hosted by PPTCO, this inaugural event transcends our annual ceremony by providing a specialized platform for suppliers and key account customers to converge, exchange knowledge, and explore opportunities.",
   "aboutHero": "About the Event",
-
   "exhibitors": "Exhibitors",
   "importance": "Importance of the Event And Expectations",
-
   "importanceNav": "WHAT TO EXPECT",
   "aboutNav": "ABOUT",
   "exhibitorsNav": "Exhibition Participants",
   "accompanyingActivitiesNav": "Event Activities",
-
   "importanceAndExpectations": [
     {
       "title": "Providing attractive smart shelves for brands inside stores and signing joint marketing plans"
@@ -34,7 +30,6 @@
   "date": "Date",
   "time": "Time",
   "exhibitionTime": "Exhibition Time",
-
   "accompanyingActivities": "Explore Our Event Activities",
   "lectures": "Lectures",
   "firstDay": "First Day",
@@ -46,15 +41,14 @@
   "lecturerInfo": "Lecturer Information",
   "return": "Return",
   "contactUs": "Contact Us",
-
   "allRightsReserved": "All Rights Reserved©",
   "companyName": "PET PRODUCTS COMPANY",
   "joinNow": "Join Now",
   "attendanceDays": "Days to Attend",
   "required": "Required",
   "trainingSessions": "Training Sessions",
-  "dateJanuary24": "January 24, 2025",
   "dateJanuary23": "January 23, 2025",
+  "dateJanuary24": "January 24, 2025",
   "eventDuration": "January 23, 2025 ~ January 25, 2025",
   "halll": "Hall",
   "sending": "Sending ...",
@@ -75,7 +69,6 @@
   "mobileNumber": "Mobile Number",
   "email": "Email",
   "download": "Download",
-
   "instantTranslation": "Instant translation to Arabic is available",
   "languageOffered": "Offered in English",
   "limitedAvailability": "Seats are limited and subject to confirmation"
