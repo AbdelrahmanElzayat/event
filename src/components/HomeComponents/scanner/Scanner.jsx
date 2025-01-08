@@ -8,11 +8,11 @@ const Scanner = () => {
   const pdfPath = "/scan.pdf";
   return (
     <div className="Scanner py-4 bg-backgroundPrimary">
-      <div className="container flex justify-between items-center flex-wrap">
+      <div className="container flex justify-between items-center flex-wrap gap-3">
         <div className="scannerContent flex flex-col gap-3">
           <h4 className="font-bold text-textPrimary">{t("licensedBy")}</h4>
           <div className="flex flex-col justify-center">
-            <span className="text-textSecondary font-semibold text-sm">
+            <span className="text-textSecondary font-semibold">
               الـــهــيــئـــة الـــعــامــــة لــلـــمــعــــارض
               والـــمــؤتــمــــرات
             </span>
