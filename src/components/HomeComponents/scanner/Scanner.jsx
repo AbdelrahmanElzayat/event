@@ -10,7 +10,7 @@ const Scanner = () => {
         <div className="scannerContent flex flex-col gap-3">
           <h4 className="font-bold text-textPrimary">مرخص من قبل :</h4>
           <div className="flex flex-col justify-center">
-            <span className="text-textSecondary font-semibold text-lg">
+            <span className="text-textSecondary font-semibold text-xs">
               الـــهــيــئـــة الـــعــامــــة لــلـــمــعــــارض
               والـــمــؤتــمــــرات
             </span>
